@@ -38,6 +38,9 @@
 		\zchar\@strnr{\footnotesize#2}}
 	% \@strerror could be defined to issue some warning/error
 	
+	% Disable hyphenation
+	\usepackage[none]{hyphenat}
+	
 	% User level commands
 	\newcommand\STr[2]{\@str{#1}{#2}\sk}  % with a full note skip
 	\newcommand\Str[2]{\@str{#1}{#2}\hsk} % with a half note skip
@@ -73,7 +76,7 @@
 	\makeatother
 	
 	% Set A5 format
-	\usepackage[left=0.5cm,top=1cm,right=0.5cm,bottom=1cm,nohead,nofoot]{geometry}
+	\usepackage[left=0.5cm,top=0.1cm,right=0.5cm,bottom=2cm,nohead,footskip=0.5cm]{geometry}
 	\geometry{a5paper}
 	
 	% Two columns
@@ -83,17 +86,27 @@
 	
 	\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
 	
-	\title{\Huge Сборник песен обо всём}
-	%\author{\Large СПО «Унисон»}
+	% Header tuning
+	\usepackage{fancyhdr}
+	\setlength{\headheight}{15.2pt}
+	\pagestyle{fancy}
+	\fancyhead[LR]{}
+	\renewcommand{\headrulewidth}{0pt} % remove header lines
+	
+	
+	\title{Сборник песен обо всём}
+	\author{Алексей Найден}
 	\date{}
 	
 	\newcommand{\gcomment}[1]{\textbf{#1}}
-	\newcommand{\gauthor}[1]{\begin{flushright}\textit{#1}\end{flushright}}
+%	\newcommand{\gauthor}[1]{\begin{flushright}\textit{#1}\end{flushright}}
+	\newcommand{\gauthor}[1]{\fancyfoot[R]{#1 }}
 	\newcommand{\gchords}[1]{{\footnotesize #1}}
+	\newcommand{\gchorus}[1]{\textit{#1}}
 	
+		
 	\begin{document}
-	\pagenumbering{gobble}
-%	\maketitle
+%	\pagenumbering{gobble}
 	\begin{titlepage}
 		\vspace*{\stretch{1.0}}
 		\begin{center}
@@ -124,8 +137,8 @@
 	
 	\section{3 полоски}
 	\gauthor{Animal Jazz}
-	\pagenumbering{arabic}
 	\begin{multicols}{2}
+		\renewcommand\guitarPreAccord{\footnotesize\strut\bfseries}
 	  \begin{guitar}
 	    \gcomment{Вступление}: \ \gchords{ Dm Dm B F (2р)} %заменила F# на Dm
 	
@@ -140,12 +153,14 @@
 	    C [B]те[F]плом. [С]{ } %перенесла на строчку
 	
 	      \gcomment{Припев:}
+	      \gchorus{
 	      [F]Джинсы порезаны, [Dm]лето,
 	      Три полоски на [Am]кедах
 	      Под теплым дож[B]дем...
 	      Ты снова лучше всех,
 	      А дачу, маму, билеты
 	      Мы переживем...
+	    }
 	
 	     \gcomment{Проигрыш:} \ \gchords{Dm Dm B F С} (2р)
 	
@@ -188,8 +203,8 @@
 	  Десять капель меня, десять капель тебя.
 	
 	  \gcomment{Припев}:
-	  [C] Твоя[E] ладонь[Am] горит[F] в моих руках,
-	  Любви пожар в твоих глазах.
+	  \gchorus{[C]Твоя[E] ладонь[Am] горит[F] в моих руках,
+	  Любви пожар в твоих глазах.}
 	
 	  \gcomment{Проигрыш}
 	
@@ -372,7 +387,7 @@
 	\gauthor{Альфред Тальковский}
 	
 	\begin{guitar}
-	\begin{multicols}{2}
+%	\begin{multicols}{2}
 	В пару[Am]синовых брюках, 
 	Широких, залатанных, длинных                                        
 	Мы хо[A7]дили вразвалку –                      
@@ -430,7 +445,7 @@
 	Отвернусь от чужого несчастья, 
 	Город мой, моё имя 
 	И лодку сожжет капитан.
-	\end{multicols}
+%	\end{multicols}
 	\end{guitar}
 	
 	\section{Вахтерам}
@@ -511,44 +526,49 @@
 	
 	\begin{guitar}
 	\gcomment{Вступление}: \ \gchords{Hm F$\sharp$m G D A} (2р)
-	            
+\begin{multicols}{2}
+	
 	[Hm]Дождь, темно и уныло.
-	[F#m]Ждешь, устала, простыла.                         
-	[G]Я останусь сегодня о[D]дин,                    
-	Но [A]ты все равно прихо[Hm]ди.                    
-	Ведь это не важно. [F#m]Да,                 
-	Пусть разные горо[G]да
-	И долгие поез[D]да.
-	Но [A]даже не нужно [Hm]ждать,
-	А просто поверить, [F#m]знать -  
-	Не заперты двери.                     
-	[G]И прозрачною каплей [D]вниз,
-	[A]Перьями птиц.
-	
-	\gcomment{Припев:}           
-	[Hm]Береги веру в [F#m]чудо, буду,                  
-	[G]Наверно, не [D]раз еще [A]буду                            
-	[Hm]Выглядеть очень ус[F#m]талым, осталось [G]мало,                     
-	Весь по горо[D]дам по вок[A]залам.       
-	[Hm]Долгие до[F#m]роги к небу                       
-	[G]И мы все время бе[D]жим,а [A]мне бы             
-	Ды[Hm]шать, просто ды[F#m]шать тобою,             
-	В[G]се до[D]верив ге[A]роям.
-	
-	Дни, плетем паутину.
-	Вне рисуют картины сны.
-	Дороги, усталость, боль,
-	Предчувствие встречи, любовь.
-	Душа не остынет пусть,
-	Волною нахлынет грусть,
-	Останусь сегодня один,
-	А ты все равно..
-	
-	\gcomment{Припев}
-	
-	\gcomment{Кода:} 
-	\ \gchords{Hm F$\sharp$m G D A} (2р)
-	\ \gchords{Hm}
+[F#m]Ждешь, устала, простыла.                         
+[G]Я останусь сегодня о[D]дин,                    
+Но [A]ты все равно прихо[Hm]ди.                    
+Ведь это не важно. [F#m]Да,                 
+Пусть разные горо[G]да
+И долгие поез[D]да.
+Но [A]даже не нужно [Hm]ждать,
+А просто поверить, [F#m]знать -  
+Не заперты двери.                     
+[G]И прозрачною каплей [D]вниз,
+[A]Перьями птиц.
+
+\gcomment{Припев:}           
+[Hm]Береги веру в [F#m]чудо, буду,                  
+[G]Наверно, не [D]раз еще [A]буду                            
+[Hm]Выглядеть очень ус[F#m]талым, осталось [G]мало,                     
+Весь по горо[D]дам по вок[A]залам.       
+[Hm]Долгие до[F#m]роги к небу                       
+[G]И мы все время бе[D]жим,а [A]мне бы             
+Ды[Hm]шать, просто ды[F#m]шать тобою,             
+В[G]се до[D]верив ге[A]роям.
+
+
+Дни, плетем паутину.
+Вне рисуют картины сны.
+Дороги, усталость, боль,
+Предчувствие встречи, любовь.
+Душа не остынет пусть,
+Волною нахлынет грусть,
+Останусь сегодня один,
+А ты все равно..
+
+\gcomment{Припев}
+
+\gcomment{Кода:} 
+\ \gchords{Hm F$\sharp$m G D A} (2р)
+\ \gchords{Hm}
+
+\end{multicols}
+
 	
 	\end{guitar}
 	
@@ -1262,7 +1282,7 @@
 	\end{guitar}
 	
 	\section{Если у вас нету тети}
-	\gauthor{Из к/ф “Ирония судьбы, или С легким паром!”}
+	\gauthor{Из к/ф “Ирония судьбы,\\или С легким паром!”}
 	
 	\begin{guitar}
 	\gcomment{Вступление}: \ \gchords{Dm G C F Dm E Am A7 Dm E Am}
@@ -1370,7 +1390,7 @@
 	
 	
 	\section{Замыкая круг}
-	\gauthor{Крис Кельми (муз.) и Маргарита Пушкина (сл.)}
+	\gauthor{Крис Кельми (муз.)\\Маргарита Пушкина (сл.)}
 	
 	\begin{multicols}{2}
 	\begin{guitar}
@@ -1492,7 +1512,7 @@
 	\end{guitar}
 	
 	\section{Землю обмотали}
-	\gauthor{Евгений Птичкин (муз.) и Михаил Пляцковский (сл.)}
+	\gauthor{Евгений Птичкин (муз.)\\ Михаил Пляцковский (сл.)}
 	
 	\begin{guitar}
 	[Am]Землю обмотали [Dm]тоненькие нити,             
@@ -2237,6 +2257,7 @@
 	\gauthor{Из к/ф “Мэри Поппинс, до свидания”}
 	
 	\begin{guitar}
+		\begin{multicols}{2}
 	[С] Изменения в природе         
 	[F] Происходят [G]год от года.
 	[C] Непогода нынче в моде,	    
@@ -2268,6 +2289,7 @@
 	
 	Кто-то ищет те[Dm]бя
 	Сре[E7]ди дож[Am]дя!
+\end{multicols}
 	\end{guitar}
 	
 	\section{Ничего на свете лучше нету}
@@ -2352,8 +2374,9 @@
 	\gauthor{Чайф}
 	\begin{multicols}{2}
 	\begin{guitar}
+	{\small
 	\gcomment{Вступление:} \ \gchords{C Am Dm G} (4р)
-	
+
 	Бу[C]тылка ке[Am]фира, полба[Dm]тона.
 	Бутылка кефира, полбатона.
 	А я се[C]годня [Am]дома,[Dm|]{ } [G]{ }
@@ -2408,6 +2431,7 @@
 	
 	\gcomment{Проигрыш}
 	\gcomment{Кода:} \ \gchords{С}
+}
 \end{guitar}
 	\end{multicols}	
 	\section{Осень}
@@ -2825,7 +2849,7 @@
 	\end{guitar}
 	
 	\section{Синий краб}
-	\gauthor{Максим Дунаевский(муз.) и Владислав Крапивин (сл.)}
+	\gauthor{Максим Дунаевский(муз.)\\Владислав Крапивин (сл.)}
 	
 	\begin{guitar}
 	Синий [Am]краб, синий краб      
@@ -3353,7 +3377,7 @@
 	Просто ангелочки, только если спят. 
 	С дурацкой улыбкой идешь до вожатской, 
 	
-	\gcomment{в тишине:} И вот тут ты опять понимаешь, что наступил в лужу с синей краской, 
+	\textit{в тишине:} И вот тут ты опять понимаешь, что наступил в лужу с синей краской, 
 	                     Ну, потому что до этого в песне пелось, что 
 	
 	Ты им всю ночь рассказываешь сказки, 
@@ -3376,7 +3400,7 @@
 	\end{guitar}
 	
 	\section{Шпагу и сердце}
-	\gauthor{Валерий Астанчук и Екатерина Булычева}
+	\gauthor{Валерий Астанчук\\и Екатерина Булычева}
 	
 	\begin{guitar}
 	[Am]Жил когда-то во [Dm]Франции              
@@ -3579,10 +3603,62 @@
 	
 	И [D]верить бу[Em]ду… [C|]{ } [G]{ }       (3р)
 	\end{guitar}
-
+	
+	% Remove author from chords pages
+	\gauthor{}
+	
 	\section{Аккорды}
 	
 	\setchordscheme{x-unit={0.3cm}, y-unit={0.3cm}, rotate={270}, name-below=true, name-distance=.1em, tuning = {,,,,,}, finger-format={\sffamily\scriptsize}, finger-x-offset={0.4}}
+
+	\chordscheme[
+name = C,
+barre = {1/1-5:1},
+finger = {3/4:2, 3/3:3, 3/2:4}, 
+mute = {6}
+]%
+\chordscheme[
+name = C$\sharp$,
+barre = {1/1-5:1},
+finger = {3/4:3, 3/2:4}, 
+mute = {6}
+]%
+\chordscheme[
+name = C$\sharp$7,
+barre = {1/1-5:1},
+finger = {3/4:3, 3/3:4, 2/2:2}, 
+mute = {6}
+]%
+\chordscheme[
+name = C$\sharp$m,
+barre = {1/1-5:1},
+finger = {3/4:3, 2/2:2}, 
+mute = {6}
+]%
+\chordscheme[
+name = C$\sharp$m7,
+barre = {1/1-5:1},
+finger = {3/4:2, 3/3:3, 3/2:4}, 
+mute = {6}
+]%
+\chordscheme[
+name = C7,
+barre = {1/1-5:1},
+finger = {3/4:3, 3/2:4}, 
+mute = {6}
+]%
+\chordscheme[
+name = Cm,
+barre = {1/1-5:1},
+finger = {3/4:3, 3/3:4, 2/2:2}, 
+mute = {6}
+]%
+\chordscheme[
+name = Cm7,
+barre = {1/1-5:1},
+finger = {3/4:3, 2/2:2}, 
+mute = {6}
+]
 
 		\chordscheme[
 			name = A,
@@ -3630,54 +3706,7 @@
 		mute = {6}
 	]
 
-	\chordscheme[
-name = C,
-barre = {1/1-5:1},
-finger = {3/4:2, 3/3:3, 3/2:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = C$\sharp$,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/2:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = C$\sharp$7,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/3:4, 2/2:2}, 
-mute = {6}
-]%
-\chordscheme[
-name = C$\sharp$m,
-barre = {1/1-5:1},
-finger = {3/4:3, 2/2:2}, 
-mute = {6}
-]%
-	\chordscheme[
-name = C$\sharp$m7,
-barre = {1/1-5:1},
-finger = {3/4:2, 3/3:3, 3/2:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = C7,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/2:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = Cm,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/3:4, 2/2:2}, 
-mute = {6}
-]%
-\chordscheme[
-name = Cm7,
-barre = {1/1-5:1},
-finger = {3/4:3, 2/2:2}, 
-mute = {6}
-]
+
 	\end{document}
 	
 	% Local Variables:
