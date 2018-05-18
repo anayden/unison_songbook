@@ -63,7 +63,8 @@
 	\usepackage{titlesec}
 	\newcommand{\sectionbreak}{\clearpage}
 	% Set section title font
-	\titleformat{\section}{\normalfont\allods\Large\bfseries}{\thesection}{0pt}{}
+	\titleformat{\section}{\allods\Large\bfseries}{\thesection}{0pt}{}
+	\titlespacing*{\section}{0pt}{0pt}{-5pt}
 	
 	% hide section numbers
 	\renewcommand{\thesection}{}
@@ -82,8 +83,6 @@
 	% Two columns
 	\usepackage{multicol}
 	
-	% \usepackage[pdftex]{hyperref}
-	
 	\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
 	
 	% Header tuning
@@ -93,20 +92,25 @@
 	\fancyhead[LR]{}
 	\renewcommand{\headrulewidth}{0pt} % remove header lines
 	
-	
 	\title{Сборник песен обо всём}
 	\author{Алексей Найден}
 	\date{}
 	
 	\newcommand{\gcomment}[1]{\textbf{#1}}
-%	\newcommand{\gauthor}[1]{\begin{flushright}\textit{#1}\end{flushright}}
 	\newcommand{\gauthor}[1]{\fancyfoot[R]{#1 }}
 	\newcommand{\gchords}[1]{{\footnotesize #1}}
 	\newcommand{\gchorus}[1]{\textit{#1}}
-	
+%	\newenvironment{gchorus}
+%	{
+%			}
+%			{
+%	
+%	}
+
+	% Make guitar chords bold
+	\renewcommand\guitarPreAccord{\footnotesize\strut\bfseries}
 		
 	\begin{document}
-%	\pagenumbering{gobble}
 	\begin{titlepage}
 		\vspace*{\stretch{1.0}}
 		\begin{center}
@@ -137,10 +141,10 @@
 	
 	\section{3 полоски}
 	\gauthor{Animal Jazz}
-	\begin{multicols}{2}
-		\renewcommand\guitarPreAccord{\footnotesize\strut\bfseries}
+	%\begin{multicols}{2}
+		
 	  \begin{guitar}
-	    \gcomment{Вступление}: \ \gchords{ Dm Dm B F (2р)} %заменила F# на Dm
+	    \gcomment{Вступление}: \gchords{ Dm Dm B F (2р)} %заменила F# на Dm
 	
 	    [Dm]Как же произошло –
 	    [B]Жизнь опять, словно [F]белый лист,
@@ -150,19 +154,19 @@
 	    [Dm]Ночь все перевернет
 	    [B]И оставит боль [F]на потом.
 	    [Dm]Точно еще повезет 
-	    C [B]те[F]плом. [С]{ } %перенесла на строчку
+	    C [B]те[F]плом. [С]{ }
 	
-	      \gcomment{Припев:}
+	      \gcomment{Припев:}%
 	      \gchorus{
 	      [F]Джинсы порезаны, [Dm]лето,
 	      Три полоски на [Am]кедах
 	      Под теплым дож[B]дем...
 	      Ты снова лучше всех,
 	      А дачу, маму, билеты
-	      Мы переживем...
-	    }
+	      Мы переживем...%
+      }
 	
-	     \gcomment{Проигрыш:} \ \gchords{Dm Dm B F С} (2р)
+	     \gcomment{Проигрыш:} \gchords{Dm Dm B F С} (2р)
 	
 	    Зайди в знакомый подъезд,
 	    Поднимись на восьмой этаж.
@@ -180,22 +184,22 @@
 	    Но, если веришь в любовь, стоит еще...
 	
 	      \gcomment{Припев} (2р)
-	      \gcomment{Кода:} \ \gchords{Bm}
+	      \gcomment{Кода:} \gchords{Bm}
 	  \end{guitar}
-	\end{multicols}
+	%\end{multicols}
 	
 	\section{10 капель}
 	\gauthor{Танцы минус}
 	
 	\begin{guitar}
-	  \gcomment{Вступление}:  \ \gchords{C E Am F}
+	  \gcomment{Вступление}:  \gchords{C E Am F}
 	
 	  [C]Десять капель дож[E]дя y тебя на пле[Am]че,
 	  Ты забыла свой [F]зонт, ты спешила ко [C]мне.
 	  Десять капель дож[E]дя на плече y теб[Am]я,
 	  Десять капель люб[F]ви, десять капель ог[C]ня.
 	
-	  \gcomment{Проигрыш}: \ \gchords{C E Am F} (2р)
+	  \gcomment{Проигрыш}: \gchords{C E Am F} (2р)
 	
 	  Время делает шаг, время делает круг,
 	  Мы забудем друзей, мы забудем подруг.
@@ -203,8 +207,12 @@
 	  Десять капель меня, десять капель тебя.
 	
 	  \gcomment{Припев}:
-	  \gchorus{[C]Твоя[E] ладонь[Am] горит[F] в моих руках,
-	  Любви пожар в твоих глазах.}
+	  \gchorus{
+	  [C]Твоя[E] ладонь[Am] горит[F] в моих руках,
+	  Любви пожар в твоих глазах.
+	}
+	  
+
 	
 	  \gcomment{Проигрыш}
 	
@@ -221,7 +229,7 @@
 	\gauthor{Жуки}
 	
 	\begin{guitar}
-	  \gcomment{Вступление}: \ \gchords{Hm A G F$\sharp$} (2р)
+	  \gcomment{Вступление}: \gchords{Hm A G F$\sharp$} (2р)
 	
 	  [Hm] Холодный [A]ветер с дож[G]дем усилил[F#]ся стократно,
 	  Все говорит об одном, что нет пути обратно,
@@ -276,7 +284,7 @@
 	Ког[H7]да ты вернешься – увидишь, что [Em]жребий
 	Давно и не [Е7]нами брошен.
 	
-	\gcomment{Проигрыш:} \ \gchords{Am  D7  G  C  Am  H7  Em} (2р)
+	\gcomment{Проигрыш:} \gchords{Am  D7  G  C  Am  H7  Em} (2р)
 	
 	Сизые сумерки прошлых лет
 	Робко крадутся по переулкам.
@@ -318,8 +326,8 @@
 	
 	\begin{guitar}
 	  \gcomment{Вступление}:
-	  \ \gchords{Am | Am/G | D}
-	  \ \gchords{D | Dm | Dm/H | E | E}
+	  \gchords{Am | Am/G | D}
+	  \gchords{D | Dm | Dm/H | E | E}
 	
 	[Am]Я вижу небо, в [Am/G]нем тишина,
 	Я подни[F]маюсь к небу, [Dm]еле ды[E]ша.
@@ -354,9 +362,9 @@
 	
 	\gcomment{Припев}
 	\gcomment{Проигрыш:}
-	\ \gchords{Am Am/G F Dm E}
-	\ \gchords{Dm7 G C Em7 Am}
-	\ \gchords{Dm7 G C Hm7 E}
+	\gchords{Am Am/G F Dm E}
+	\gchords{Dm7 G C Em7 Am}
+	\gchords{Dm7 G C Hm7 E}
 	
 	[Hm]Я поднимаю [Hm/A]свой воротник,
 	Ругаю [G]дождь и слякоть, [Em]будто ста[F#]рик,
@@ -379,7 +387,7 @@
 	Свободно только небо
 	[Em/C#]Над головой мо[F#7]ей.
 	
-	\gcomment{Кода:} \ \gchords{Hm}
+	\gcomment{Кода:} \gchords{Hm}
 	\end{guitar}
 	
 	      
@@ -387,7 +395,7 @@
 	\gauthor{Альфред Тальковский}
 	
 	\begin{guitar}
-%	\begin{multicols}{2}
+%	%\begin{multicols}{2}
 	В пару[Am]синовых брюках, 
 	Широких, залатанных, длинных                                        
 	Мы хо[A7]дили вразвалку –                      
@@ -445,14 +453,14 @@
 	Отвернусь от чужого несчастья, 
 	Город мой, моё имя 
 	И лодку сожжет капитан.
-%	\end{multicols}
+%	%\end{multicols}
 	\end{guitar}
 	
 	\section{Вахтерам}
 	\gauthor{Бумбокс}
 	
 	\begin{guitar}
-	  \gcomment{Вступление}: \ \gchords{Am G Dm E7}
+	  \gcomment{Вступление}: \gchords{Am G Dm E7}
 	
 	Тебе не нравится [Am]дым, и черт с ним.            
 	Он убивает сло[G]ва, кругом голова.              
@@ -474,7 +482,7 @@
 	Теперь узнает страна до темна - 
 	Им донесут обо всем на FM-волнах.
 	
-	\gcomment{Припев:}                 
+	\gcomment{Припев:}
 	Я помню [Am]белые обои, [C]черная посуда,                 
 	[Dm]Нас в хрущевке двое,[E7] кто мы и откуда, откуда?              
 	[Am]Задвигаем шторы, [C]кофеек, плюшки стынут.                  
@@ -501,7 +509,7 @@
 	А уходить, не спросив - нету сил.
 	Давай попробуем заново все собрать.
 	
-	\gcomment{Припев:} %расписала припев
+	\gcomment{Припев:}
 	Белые обои, черная посуда,                 
 	Нас в хрущевке двое, кто мы и откуда, откуда?              
 	Задвигаем шторы, кофеек, плюшки стынут.                  
@@ -525,8 +533,8 @@
 	\gauthor{Алексей Носов}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Hm F$\sharp$m G D A} (2р)
-\begin{multicols}{2}
+	\gcomment{Вступление}: \gchords{Hm F$\sharp$m G D A} (2р)
+%\begin{multicols}{2}
 	
 	[Hm]Дождь, темно и уныло.
 [F#m]Ждешь, устала, простыла.                         
@@ -564,10 +572,10 @@
 \gcomment{Припев}
 
 \gcomment{Кода:} 
-\ \gchords{Hm F$\sharp$m G D A} (2р)
-\ \gchords{Hm}
+\gchords{Hm F$\sharp$m G D A} (2р)
+\gchords{Hm}
 
-\end{multicols}
+%\end{multicols}
 
 	
 	\end{guitar}
@@ -601,8 +609,7 @@
 	Билет в один конец, весна
 	
 	\gcomment{Припев}
-	
-	\gcomment{Проигрыш:} \ \gchords{G Hm C Cm Cm7 D D7}
+	\gcomment{Проигрыш:} \gchords{G Hm C Cm Cm7 D D7}
 	        
 	Верхом на звезде
 	Несусь навстречу ветрам,
@@ -616,7 +623,7 @@
 	\gauthor{ДДТ}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Em C Am D} (4р)
+	\gcomment{Вступление}: \gchords{Em C Am D} (4р)
 	                           
 	[Em] О, прекрасная [D]даль, поглотившая [Em]небо. [C|]{ } [Am|]{ } [D]{ }
 	Облака, как к любимой, прижались к земле,
@@ -629,7 +636,7 @@
 	И, у[D]пав между [G]нами,[D] так недолго лю[Em]бимых,[C]{ }
 	Разбил он объ[G]ятья,[D] как простое сте[Em]кло.
 	
-	\gcomment{Проигрыш:} \ \gchords{Em C Am D/F$\sharp$} (4р) 
+	\gcomment{Проигрыш:} \gchords{Em C Am D/F$\sharp$} (4р) 
 	
 	Мы стояли на прошлом, мы ждали начала,
 	Прижимаясь к стене, где исчезли они,
@@ -640,8 +647,7 @@
 	\gcomment{Проигрыш} (2р)
 	\gcomment{Припев}
 	\gcomment{Проигрыш}
-	
-	\gcomment{Кода:} \ \gchords{Em}
+	\gcomment{Кода:} \gchords{Em}
 	\end{guitar}
 	
 	\section{Вечер бродит}
@@ -680,7 +686,7 @@
 	\gauthor{Мумий Тролль}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Am}
+	\gcomment{Вступление}: \gchords{Am}
 	
 	С гра[Am]натою в кармане, с чекою в руке,
 	Мне чайки здесь запели на знакомом языке. 
@@ -709,17 +715,17 @@
 	Где вылизан весь берег, не дошел до волны,
 	Где рельсы вылезали из кармана страны.
 	
-	\gcomment{Припев} (2р) %Добавила коду
+	\gcomment{Припев} (2р)
 	\gcomment{Кода:} 
-	     У[Am]ходим, уходим, у[Dm]ходим... [C]{ }[E]{ } (2р)
-	     [Am]
+	     У[Am]ходим, уходим, у[Dm]ходим... [C|]{ }[E]{ } (2р)
+	     [Am]{ }
 	\end{guitar}
 	
 	\section{Восьмиклассница}
 	\gauthor{Кино}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Am Em} (4р) 
+	\gcomment{Вступление}: \gchords{Am Em} (4р) 
 	            
 	Пус[Am]тынной ули[Em]цей вдвоем                
 	С тоб[C]ой куда-то [G]мы идем,                 
@@ -733,7 +739,7 @@
 	[F]М-ммм[G]м, восьми[C]классница а-a-[Am]а,          
 	[F]М-ммм[G]м\dots
 	
-	\gcomment{Проигрыш:} \ \gchords{Am  Em} (4р) 
+	\gcomment{Проигрыш:} \gchords{Am  Em} (4р) 
 	
 	Ты говоришь, что у тебя
 	По географии трояк,
@@ -760,7 +766,7 @@
 	\gauthor{Чиж \& Co}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Am Am Am G} (4р)
+	\gcomment{Вступление}: \gchords{Am Am Am G} (4р)
 	                                 
 	Вот [Am]пуля просвистела, в грудь по[C]пала мне,                           
 	[Dm]Спасся я в степи я на ли[Am]хом ко[G]не,                        
@@ -781,9 +787,8 @@
 	
 	\gcomment{Припев}
 	\gcomment{Проигрыш:}
-	\ \gchords{Am Am Am G} (2р)
-	\ \gchords{Am C Dm Am G} (2р)
-	
+	 \gchords{Am Am Am G} (2р)
+	 \gchords{Am C Dm Am G} (2р)
 	\gcomment{Припев}
 	
 	Спаса со стены под рубаху снял,
@@ -793,8 +798,8 @@
 	
 	\gcomment{Припев}
 	\gcomment{Кода:} 
-	\ \gchords{Am Am Am G} (2р)
-	\ \gchords{Am}
+	 \gchords{Am Am Am G} (2р)
+	 \gchords{Am}
 	\end{guitar}
 	
 	\section{Все расстояния}
@@ -827,7 +832,7 @@
 	\gauthor{Сплин}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Em C G} (4р)
+	\gcomment{Вступление}: \gchords{Em C G} (4р)
 	                     
 	[C] Сколько лет про[G]шло,                  
 	Все о [D]том же гу[Em]дят провода,
@@ -854,7 +859,7 @@
 	Лишь бы мы проснулись в одной постели...
 	
 	\gcomment{Припев}
-	\gcomment{Проигрыш:} \ \gchords{Em C G} (4р)
+	\gcomment{Проигрыш:} \gchords{Em C G} (4р)
 	
 	Сколько лет пройдет, 
 	Все о том же гудеть проводам,
@@ -868,12 +873,12 @@
 	[С] Выхода [G]нет,          
 	[D] Выхода [Em]нет!
 	
-	\ \gchords{Em C G} (4р)
+	\gchords{Em C G} (4р)
 	\end{guitar}
 	
 	\section{Гимн ССО ЛЭТИ}
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Em A F G H} (2р)
+	\gcomment{Вступление}: \gchords{Em A F G H} (2р)
 	
 	[Em]Все! Окончен по[G]следний эк[A]замен,                  
 	[Em]Вновь реет от[G]рядное [A]знамя,               
@@ -963,7 +968,7 @@
 	\gauthor{Зимовье зверей}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Dm}
+	\gcomment{Вступление}: \gchords{Dm}
 	          
 	[Dm]Он ревновал е[Gm]е к дождю                  
 	[A7]И укрывал джин[Dm]совой курткой
@@ -1037,14 +1042,14 @@
 	И воздух был упрям и тонок,
 	Впитав рассеянный рассвет.
 	
-	\gcomment{Проигрыш} \ \gchords{Dm Gm A7 Dm} (2р)
+	\gcomment{Проигрыш} \gchords{Dm Gm A7 Dm} (2р)
 	\end{guitar}
 	
 	\section{До скорой встречи}
 	\gauthor{Звери}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{F Dm G C F Dm E}         
+	\gcomment{Вступление}: \gchords{F Dm G C F Dm E}         
 	
 	Вчерашний [Dm]вечер	 		  
 	Из подво[G]ротни, на все со[Am]гласен.          
@@ -1070,7 +1075,7 @@
 	До скорой встречи.
 	
 	\gcomment{Припев} (2р)
-	\gcomment{Проигрыш:} \ \gchords{F Dm G C F Dm E} (2р)
+	\gcomment{Проигрыш:} \gchords{F Dm G C F Dm E} (2р)
 	
 	Моя love-story 
 	Короче ночи, смотрю на время.
@@ -1148,7 +1153,7 @@
 	\gauthor{Мельница}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Em A Em A F$\sharp$m D A Bm G} 
+	\gcomment{Вступление}: \gchords{Em A Em A F$\sharp$m D A Bm G} 
 	
 	На[Em]лей еще ви[A]на, мой [Em]венценосный [A]брат,
 	Смо[G]три - восходит [F#m]полная лу[Hm]на. [H]{ }
@@ -1201,7 +1206,7 @@
 	Смо[Gm]три - на дне мер[C]цает 
 	Про[Gm]щальная звез[C]да;         
 	Я [A#]осушу бо[Am]кал до дна...                          
-	И с [F]легким [C]сердцем[Dm] - по До[Am]роге [A#]Сна...
+	И с [F]легким [C]сердцем [Dm]{--} по До[Am]роге [A#]Сна...
 	                
 	... по Дороге [C]Сна...               
 	... по Дороге [D]Сна...
@@ -1211,7 +1216,7 @@
 	\gauthor{Мельница}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Am F | G G C Gsus4 | F G | Am}
+	\gcomment{Вступление}: \gchords{Am F | G G C Gsus4 | F G | Am}
 	                    
 	[Am]Там, за третьим пере[D]крестком,     
 	И от[Dm]туда строго к югу                
@@ -1245,10 +1250,9 @@
 	Словно память древней боли.
 	
 	\gcomment{Припев}  
-	
-	\gcomment{Проигрыш}
-	\ \gchords{Am  F | G G C Gsus4 | F G | Am}
-	\ \gchords{Am  F | G G C Gsus4 | F G | D}
+	\gcomment{Проигрыш:}
+	\gchords{Am  F | G G C Gsus4 | F G | Am}
+	\gchords{Am  F | G G C Gsus4 | F G | D}
 	
 	[Hm]Там, у третьего по[E]рога,     
 	За ши[Em]рокою ступенью,            
@@ -1285,7 +1289,7 @@
 	\gauthor{Из к/ф “Ирония судьбы,\\или С легким паром!”}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Dm G C F Dm E Am A7 Dm E Am}
+	\gcomment{Вступление}: \gchords{Dm G C F Dm E Am A7 Dm E Am}
 	
 	[Am]Если у вас нету дома, по[Dm]жаpы е[G]му не стpаш[C]ны. [A7]{ }
 	И же[Dm]на не уй[E]дет к дpу[F]гому,[A7]{ }
@@ -1392,7 +1396,6 @@
 	\section{Замыкая круг}
 	\gauthor{Крис Кельми (муз.)\\Маргарита Пушкина (сл.)}
 	
-	\begin{multicols}{2}
 	\begin{guitar}
 	[C] Вот одна из [F]тех историй,               
 	[C] О которых [Am]люди [G]спорят                             
@@ -1409,9 +1412,9 @@
 	В чем секрет простых мелодий? 
 	Нам хотелось знать наверняка.
 	
-	[C7]{ }
-	\gcomment{Припев:} %сместила С7
-	Замы[F]кая [G]круг, 
+	
+	\gcomment{Припев:}
+	[C7]{ }Замы[F]кая [G]круг, 
 	Ты на[Em]зад посмотришь [Am]вдруг – 
 	Там увидишь в [Dm]окнах свет, 
 	Си[G]яющий нам [C]вслед.
@@ -1448,7 +1451,7 @@
 	
 	\gcomment{Припев}
 \end{guitar}
-	\end{multicols}
+	%\end{multicols}
 
 	
 	\section{Зелёный ёжик}
@@ -1496,9 +1499,9 @@
 	Ты танцуешь джигу.
 	 
 	\gcomment{Проигрыш:}
-	\ \gchords{Am Am F G } (2р)
-	\ \gchords{A A G G} 
-	\ \gchords{A A F G A}
+	\gchords{Am Am F G } (2р)
+	\gchords{A A G G} 
+	\gchords{A A F G A}
 	
 	\gcomment{Припев:}
 	Наливай, свой зеленый чай, ежик, 
@@ -1541,9 +1544,9 @@
 	
 	\section{Интересно}
 	\gauthor{Элизиум}
-	\begin{multicols}{2}
+	%\begin{multicols}{2}
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{C Em Am F G}
+	\gcomment{Вступление}: \gchords{C Em Am F G}
 	
 	[C] В сотый раз тупая ссора,
 	[Em] Исполненье приговора.
@@ -1584,17 +1587,17 @@
 	Навсегда?
 	
 	\gcomment{Припев}
-	\gcomment{Кода:} \ \gchords{C Em Am F G} (4р)
+	\gcomment{Кода:} \gchords{C Em Am F G} (4р)
 \end{guitar}
-	\end{multicols}
+	%\end{multicols}
 
 	
 	\section{Космос}
 	\gauthor{Элизиум}
 	
-	\begin{multicols}{2}
+	%\begin{multicols}{2}
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{D A Hm G D A G A} (2р) \ \gchords{D}
+	\gcomment{Вступление}: \gchords{D A Hm G D A G A} (2р) \gchords{D}
 	
 	Здесь меня ни[A]что не держит,               
 	[Hm]Здесь мне все дав[G]но знакомо. [D]{ }
@@ -1622,7 +1625,7 @@
 	У нас впереди вся жизнь
 	Попробуй, догони!
 	
-	\gcomment{Проигрыш:} \ \gchords{D A Hm G D A G A} (2р)
+	\gcomment{Проигрыш:} \gchords{D A Hm G D A G A} (2р)
 	
 	Манят нас вперед с тобою
 	Неоткрытые планеты,
@@ -1647,7 +1650,7 @@
 	Мы уже... O, дома! 
 	Куда улетать?
 \end{guitar}
-	\end{multicols}
+	%\end{multicols}
 
 	
 	\section{Любите, девушки}
@@ -1675,9 +1678,9 @@
 	
 	\section{Марионетки}
 	\gauthor{Машина времени}
-\begin{multicols}{2}
+%\begin{multicols}{2}
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{G C} (4р) 
+	\gcomment{Вступление}: \gchords{G C} (4р) 
 	
 	[G] Лица стерты, краски тусклы - 
 	[Em] То ли люди, то ли куклы,
@@ -1705,7 +1708,7 @@
 	Ля-ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля ля-ля-ля
 	Ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля-ля-ля-ля
 	
-	\gcomment{Проигрыш} \ \gchords{C D G E7 Am D G} 
+	\gcomment{Проигрыш} \gchords{C D G E7 Am D G} 
 	
 	Ах, до чего ж порой обидно, 
 	Что хозяина не видно, -
@@ -1730,14 +1733,14 @@
 	Ля-ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля ля-ля-ля
 	Ля-ля-ля-ля-ля-ля ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля-ля-ля-ля
 	
-	\gcomment{Кода:} \ \gchords{C D G E7 Am D G}
+	\gcomment{Кода:} \gchords{C D G E7 Am D G}
 \end{guitar}
-\end{multicols}	
+%\end{multicols}	
 
 	
 	\section{Между небом и потолком}
 	\gauthor{Дмитрий Поляков и Андрей Тимофеев}
-	\begin{multicols}{2}
+	%\begin{multicols}{2}
 	\begin{guitar}
 	[D] Я – маленький мальчик 
 	[G] С мечтами о мире, 
@@ -1781,14 +1784,14 @@
 	
 	\gcomment{Припев} 
 \end{guitar}
-	\end{multicols}
+	%\end{multicols}
 
 	
 	\section{Метель}
 	\gauthor{ДДТ}
-	\begin{multicols}{2}
+	%\begin{multicols}{2}
 \begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Em C G D} (2р)
+	\gcomment{Вступление}: \gchords{Em C G D} (2р)
 	
 	[Em]Коро[C]нована лу[G]ной, [D]{ }
 	Как начало – высока,
@@ -1816,7 +1819,7 @@
 	Со мной... 
 	Со мной...
 	
-	\gcomment{Проигрыш:} \ \gchords{Em C G D} (2р)
+	\gcomment{Проигрыш:} \gchords{Em C G D} (2р)
 	
 	Ищут землю фонари,
 	К небу тянется свеча.
@@ -1829,25 +1832,25 @@
 	О затерянных вещах.
 	
 	\gcomment{Припев}
-	\gcomment{Проигрыш:} \ \gchords{E C G D} (2р)
+	\gcomment{Проигрыш:} \gchords{E C G D} (2р)
 	
 	[E] Осто[C]рожно, не спе[G]ша, [D]{ }
 	С белым ветром на груди,
 	Где у вмерзшей в лед ладьи
 	Ждет озябшая душа.
 	
-	\gcomment{Проигрыш:} \ \gchords{E C G D} (6р)
+	\gcomment{Проигрыш:} \gchords{E C G D} (6р)
 	\gcomment{Припев}
-	\gcomment{Кода:} \ \gchords{Em C G D} (4р)
+	\gcomment{Кода:} \gchords{Em C G D} (4р)
 \end{guitar}
-	\end{multicols}
+	%\end{multicols}
 	
 	
 	\section{Мой рок-н-ролл}
 	\gauthor{Би-2}
 
 	\begin{guitar}
-	\gcomment{Вступление:} \ \gchords{F G Am}
+	\gcomment{Вступление:} \gchords{F G Am}
 	                                  
 	И [F]то, что было, н[G]абело от[Am]кроется потом.
 	[G]Мой Rock'n'[F]Roll -                        
@@ -1864,7 +1867,7 @@
 	Лишь т[Am]олько отблески рас[G]света
 	То[F]го, где [G]ты меня не [Am]ждешь.
 	
-	\gcomment{Проигрыш:} \ \gchords{F G Am}
+	\gcomment{Проигрыш:} \gchords{F G Am}
 	
 	А дальше - это главное - похоже на тебя,
 	В долгом пути я заплету волосы лентой,
@@ -1899,7 +1902,7 @@
 	И мое сердце остановилось,
 	Мое сердце замерло.
 	
-	\gcomment{Проигрыш:} \ \gchords{D G D A Hm} (2p)
+	\gcomment{Проигрыш:} \gchords{D G D A Hm} (2p)
 	
 	И ровно тысячу лет мы просыпаемся вместе,
 	Даже если уснули в разных местах.  
@@ -1934,7 +1937,7 @@
 	\gauthor{Би-2}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{G D Em C} (2р)
+	\gcomment{Вступление}: \gchords{G D Em C} (2р)
 	                                          
 	[G]Тише, души на [D]крыше медленно [Em]дышат перед прыж[С]ком.
 	Слышу все твои мысли, то, что нам близко, всё кувырком.
@@ -1955,20 +1958,20 @@
 	Мы здесь лишь на миг, пусть он звучит, словно слова молитвы.
 	
 	\gcomment{Припев}
-	\gcomment{Проигрыш} \ \gchords{G D Em C}
+	\gcomment{Проигрыш} \gchords{G D Em C}
 	\gcomment{Припев} (2р)
 	\end{guitar}
 	
 	\section{Моря и океаны}
 	\gauthor{Элизиум}
-	\begin{multicols}{2}
+	%\begin{multicols}{2}
 	\begin{guitar}
 	Все [C]обалденно, все [F]иде[G]ально,                          
 	Все [Am]так прекрасно, но [F]так ба[G]нально.
 	С ума сойти, как все надежно,
 	Все позитивно и бестревожно.
 	
-	\gcomment{Проигрыш} \ \gchords{C G Am F G} (2р)
+	\gcomment{Проигрыш} \gchords{C G Am F G} (2р)
 	
 	Мне больше нечего боятся,
 	Начать движняк или остаться.
@@ -2004,12 +2007,12 @@
 	\gcomment{Припев}
 	\gcomment{Проигрыш} (2р)
 \end{guitar}
-	\end{multicols}
+	%\end{multicols}
 	\section{Муравейник}
 	\gauthor{Кино}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{G A D Hm G A D} (2р)
+	\gcomment{Вступление}: \gchords{G A D Hm G A D} (2р)
 	
 	Начи[D]нается новый [A]день,
 	И ма[Hm]шины туда-сю[G]да. [A]{ }
@@ -2032,7 +2035,7 @@
 	Но если [G]верить глазам и у[A]шам -
 	Больше в несколько [D]раз.
 	
-	\gcomment{Проигрыш}  \ \gchords{Hm G A D} (4р)
+	\gcomment{Проигрыш:  }  \gchords{Hm G A D} (4р)
 	
 	И мы могли бы вести войну
 	Против тех, кто против нас,
@@ -2162,9 +2165,9 @@
 	Нужен ли он кому-то тут?
 	
 	\gcomment{Припев.}
-	\gcomment{Проигрыш:} \ \gchords{G Hm G E Am D}  (2р)
+	\gcomment{Проигрыш:} \gchords{G Hm G E Am D}  (2р)
 	\gcomment{Припев.}
-	\gcomment{Кода:} \ \gchords{D G}
+	\gcomment{Кода:} \gchords{D G}
 	\end{guitar}
 	
 	\section{На моей луне}
@@ -2189,7 +2192,7 @@
 	И я опять вхожу в твой дом.
 	
 	\gcomment{Припев.} (2р)
-	\gcomment{Проигрыш:} \ \gchords{Dm C B F Dm C B Gm}
+	\gcomment{Проигрыш:} \gchords{Dm C B F Dm C B Gm}
 	
 	Блеск этих волшебных глаз околдовал меня,
 	Будто бы в первый раз - я их понимаю.
@@ -2202,9 +2205,9 @@
 	\section{Не со мной}
 	\gauthor{Чайф}
 	
-	\begin{multicols}{2}
+	%\begin{multicols}{2}
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{G C} (2р)
+	\gcomment{Вступление}: \gchords{G C} (2р)
 	
 	[G] Собираю марки
 	[Em] От чужих конвертов,
@@ -2248,16 +2251,16 @@
 	Без тебя паршиво.
 	
 	\gcomment{Припев}
-	\gcomment{Кода:} \ \gchords{G C} (2р)
+	\gcomment{Кода:} \gchords{G C} (2р)
 \end{guitar}
-	\end{multicols}
+	%\end{multicols}
 
 	
 	\section{Непогода}
 	\gauthor{Из к/ф “Мэри Поппинс, до свидания”}
 	
 	\begin{guitar}
-		\begin{multicols}{2}
+		%\begin{multicols}{2}
 	[С] Изменения в природе         
 	[F] Происходят [G]год от года.
 	[C] Непогода нынче в моде,	    
@@ -2289,14 +2292,14 @@
 	
 	Кто-то ищет те[Dm]бя
 	Сре[E7]ди дож[Am]дя!
-\end{multicols}
+%\end{multicols}
 	\end{guitar}
 	
 	\section{Ничего на свете лучше нету}
 	\gauthor{Из к/ф “Бременские музыканты”}
 	
 	\begin{guitar}
-	\gcomment{Вступление:} \ \gchords{С B C E$\flat$} (2р)
+	\gcomment{Вступление:} \gchords{С B C E$\flat$} (2р)
 	
 	[C]Ничего на свете лучше [Em]нету,                             
 	[Dm]Чем бродить друзьям по белу [G]свету.                            
@@ -2307,7 +2310,7 @@
 	На-на-на-[Am]на-на-на на-на-на-[Dm]на-най на-на-на 
 	[G]е е-е е-е
 	
-	\gcomment{Проигрыш:} \ \gchords{С B C E$\flat$} (2р)
+	\gcomment{Проигрыш:} \gchords{С B C E$\flat$} (2р)
 	
 	Мы свое призванье не забудем:
 	Смех и радость мы приносим людям.
@@ -2332,22 +2335,21 @@
 	На-на-на-[F]най-най на-на-на 
 	[G]е е-е е-е
 	
-	\gcomment{Кода:} \ \gchords{С B C E$\flat$} (2р) 
-	                 \ \gchords{С}
+	\gcomment{Кода:} \gchords{С B C E$\flat$} (2р)  \gchords{С} 
 	\end{guitar}
 	
 	\section{О любви}
 	\gauthor{Чиж \& Co}
 	
 	\begin{guitar}
-	\gcomment{Вступление:}  \ \gchords{D F$\sharp$ Hm G A} (2р) \ \gchords{D}
+	\gcomment{Вступление:}  \gchords{D F$\sharp$ Hm G A} (2р) \gchords{D}
 	
 	А не [F#]спеть ли мне [Hm]песню[G]  [A]о люб[D]ви,
 	А не выдумать ли новый жанр?
 	Попопсовей мотив и стихи,
 	И всю жизнь получать гонорар.
 	
-	\gcomment{Проигрыш:} \ \gchords{D F$\sharp$ Hm G A} (2р) \ \gchords{D}
+	\gcomment{Проигрыш:} \gchords{D F$\sharp$ Hm G A} (2р) \gchords{D}
 	
 	Мою песню услышат тысячи глаз,
 	Мое фото раскупят сотни рук,
@@ -2372,10 +2374,10 @@
 	
 	\section{Оранжевое настроение}
 	\gauthor{Чайф}
-	\begin{multicols}{2}
+	%\begin{multicols}{2}
 	\begin{guitar}
 	{\small
-	\gcomment{Вступление:} \ \gchords{C Am Dm G} (4р)
+	\gcomment{Вступление:} \gchords{C Am Dm G} (4р)
 
 	Бу[C]тылка ке[Am]фира, полба[Dm]тона.
 	Бутылка кефира, полбатона.
@@ -2410,7 +2412,7 @@
 	И как у него,
 	Оранжевое настрое-е-е-е-енье!
 	
-	\gcomment{Проигрыш} \ \gchords{C Am Dm G} (4р)
+	\gcomment{Проигрыш} \gchords{C Am Dm G} (4р)
 	
 	А кефир я допью ровно в десять.
 	А батон я доем чуть пораньше.
@@ -2430,17 +2432,15 @@
 	Оранжево поют!
 	
 	\gcomment{Проигрыш}
-	\gcomment{Кода:} \ \gchords{С}
+	\gcomment{Кода:} \gchords{С}
 }
 \end{guitar}
-	\end{multicols}	
 	\section{Осень}
 	\gauthor{Пилот}
 	
 	\begin{guitar}
 	\gcomment{Вступление}:
-	\ \gchords{Em C Am H7} (4р) 
-	\ \gchords{Am H7}
+	\gchords{Em C Am H7} (4р) \gchords{Am H7}
 	
 	[Em]Стрелки, спотыкаясь, бе[C]гут,
 	[Am]Тёмное время, [H7]поздняя осень.
@@ -2457,9 +2457,7 @@
 	Нет у тебя ни минуты вовсе, 
 	Скоро зима все дороги спрячет.
 	
-	\gcomment{Проигрыш:}
-	\ \gchords{Em C Am H7} (4р)
-	\ \gchords{Am H7}
+	\gcomment{Проигрыш:} \gchords{Em C Am H7} (4р) \gchords{Am H7}
 	
 	Дома на гитаре аккорд,
 	Стены в цветочек, китайские блюдца,
@@ -2471,7 +2469,7 @@
 	Босоногое детское счастье, где ты?
 	
 	\gcomment{Припев}
-	\gcomment{Проигрыш:} \ \gchords{Em C Am H7} (2р)
+	\gcomment{Проигрыш:} \gchords{Em C Am H7} (2р)
 	
 	Нужно на всё наплевать!
 	То, что случилось, понять невозможно!
@@ -2483,16 +2481,15 @@
 	Собрав чемодан, на юг уехала радость.
 	
 	\gcomment{Припев}
-	\gcomment{Кода:}
-	\ \gchords{Em C Am H7} (4р)
-	\ \gchords{Am H7 Em}
+	\gcomment{Кода:} \gchords{Em C Am H7} (4р) \gchords{Am H7 Em}
+	
 	\end{guitar}
 	
 	\section{Ослепительный мир}
 	\gauthor{Элизиум}
 	
 	\begin{guitar}
-	\gcomment{Вступление:} \ \gchords{С Am F G}
+	\gcomment{Вступление:} \gchords{С Am F G}
 	
 	[C] Опять стартуют кара[G]ваны ракет
 	[Am] В далекий космос, к неиз[F]вестным мирам,
@@ -2528,7 +2525,7 @@
 	И возвратимся домой...
 	
 	\gcomment{Припев}
-	\gcomment{Проигрыш:} \ \gchords{С Am F G} (2р)
+	\gcomment{Проигрыш:} \gchords{С Am F G} (2р)
 	\gcomment{Припев}
 	
 	Мир, ослепительный мир,
@@ -2666,7 +2663,7 @@
 	\gauthor{Ария}
 	
 	\begin{guitar}
-	\gcomment{Вступление:} \ \gchords{Am D F C G}     
+	\gcomment{Вступление:} \gchords{Am D F C G}     
 	
 	[Am] От края до края [D]небо в огне сгорает,                             
 	[F] И в нём исчезают все на[C]дежды и ме[G]чты,
@@ -2679,7 +2676,7 @@
 	Дале[F]ко – там, где [G]неба кончается [Am|] [G|] [C|] [Dm]кра-а-а-ай
 	Ты най[F]дёшь[G] потерянный [Am]рай. 
 	
-	\gcomment{Проигрыш:} \ \gchords{Am D F C G}
+	\gcomment{Проигрыш:} \gchords{Am D F C G}
 	
 	Во сне хитрый демон может пройти сквозь стены,
 	Дыханье у спящих он умеет похищать.
@@ -2687,7 +2684,7 @@
 	Твои сновиденья до рассвета охранять.
 	
 	\gcomment{Припев}
-	\gcomment{Проигрыш:} \ \gchords{Am G D F} (2р) \ \gchords{E7}
+	\gcomment{Проигрыш:} \gchords{Am G D F} (2р) \gchords{E7}
 
 	[Hm] Подставлю ладони – их [E]болью своей наполни,                               
 	[G] Наполни печалью, страхом [D]гулкой темно[A]ты.                  
@@ -2705,7 +2702,7 @@
 	В [G]мире снов         
 	Все на[D]дежды и ме[A]чты
 	
-	\gcomment{Кода:} \ \gchords{Hm E G D A F$\sharp$7 Hm}
+	\gcomment{Кода:} \gchords{Hm E G D A F$\sharp$7 Hm}
 	\end{guitar}
 	
 	\section{Птицы}
@@ -2727,7 +2724,6 @@
 	Слава те[F]перь ничего не значит,
 	И я по [C]лезвию – краю пропасти
 	Наве[G]щаю свою у[E]дачу.
-	
 	Я наблюдаю твое движение
 	И отпускаю на расстояние,
 	Я начинаю верить в спасение,
@@ -2758,7 +2754,7 @@
 	\gauthor{Звери}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Am Dm E7 Am F Dm E7 Am}
+	\gcomment{Вступление}: \gchords{Am Dm E7 Am F Dm E7 Am}
 	
 	[Am]Больше нече[Dm]го ловить – [E7]все, что надо, [Am]я поймал.
 	Надо сразу уходить, чтоб никто не привыкал.                          
@@ -2775,7 +2771,7 @@
 	Развеселые зрачки, я шагаю налегке.
 	
 	\gcomment{Припев} (2р)          
-	\gcomment{Проигрыш:} \ \gchords{Am Dm E7 Am} (2р)
+	\gcomment{Проигрыш:} \gchords{Am Dm E7 Am} (2р)
 	
 	Вот и все, никто не ждет и никто не в дураках,
 	Кто-то любит, кто-то врет и летает в облаках.
@@ -2786,14 +2782,14 @@
 	
 	Я ухожу, ухожу красиво. 
 	
-	\gcomment{Кода:} \ \gchords{Am Dm E7 Am} (2р)
+	\gcomment{Кода:} \gchords{Am Dm E7 Am} (2р)
 	\end{guitar}
 	
 	\section{Ребята знают}
 	\gauthor{Торба-На-Круче}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{E7}
+	\gcomment{Вступление}: \gchords{E7}
 	
 	Ребята [Am]знают: уехал в Питер.                     
 	Пишите письма или зво[Е7]ните.                                                
@@ -2888,7 +2884,7 @@
 	\gauthor{Би-2}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Е7}
+	\gcomment{Вступление}: \gchords{Е7}
 	
 	"Я не вер[Am]нусь" - [F|]{ } [Dm]{ }
 	Так гово[E7]рил ког[Am]да-то,
@@ -2903,7 +2899,7 @@
 	[Dm]  Не поте[E7]рять бы в сере[Am]бре
 	Ее од[F]ну, за[Dm]ветну[E]ю. 
 	
-	\gcomment{Проигрыш} \ \gchords{Am F Dm E7} (2р)
+	\gcomment{Проигрыш} \gchords{Am F Dm E7} (2р)
 	
 	Не по себе 
 	От этой тихой и чужой зимы,
@@ -2929,7 +2925,7 @@
 	\gauthor{Элизиум}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{D F$\sharp$ F$\sharp$7 Hm G A} (2р)
+	\gcomment{Вступление}: \gchords{D F$\sharp$ F$\sharp$7 Hm G A} (2р)
 	
 	[D] У тебя опять сегодня[F#]{ }
 	Оказался [F#7]день неважный:                                   
@@ -2957,14 +2953,14 @@
 	В ритме солнечного света!
 	
 	\gcomment{Припев} (2р)
-	\gcomment{Кода:} \ \gchords{D}
+	\gcomment{Кода:} \gchords{D}
 	\end{guitar}
 	
 	\section{Сон Ц}
 	\gauthor{Саша Ордин}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{C G Am F} (2р)                        
+	\gcomment{Вступление}: \gchords{C G Am F} (2р)                        
 	
 	[C]Я по же[G]лезной до[Am]роге и[F]ду,                             
 	Не свер[C]нуть мне ни [G]вправо, ни [Am]влево.                          
@@ -3023,8 +3019,8 @@
 	
 	\begin{guitar}
 	\gcomment{Вступление}: 
-	\ \gchords{C G Am F} (3р)
-	\ \gchords{C G Am Dm E7}
+	\gchords{C G Am F} (3р)
+	\gchords{C G Am Dm E7}
 	
 	[Am]Умные с лица мы,[Dm] а в душе как дети,                        
 	Вст[G]анем на пут[E7]и – не [Am]обойдёшь. [E7]{ }
@@ -3068,7 +3064,7 @@
 	Ой-ёй-[G]ёй, на-на, [Am]на-на-на! [F|]{ } [G|]{ } [С]{ }
 	Ой-ё,[G] на-на-на-на, [Am]на-на. [F]{ } (4р)
 	
-	\gcomment{Кода:} \ \gchords{F G C}
+	\gcomment{Кода:} \gchords{F G C}
 	
 	
 	\end{guitar}
@@ -3077,7 +3073,7 @@
 	\gauthor{Чичерина}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{С$\sharp$m G$\sharp$7 F$\sharp$ A} (4р)
+	\gcomment{Вступление}: \gchords{С$\sharp$m G$\sharp$7 F$\sharp$ A} (4р)
 	
 	[C#m]Я сто[F#]ю на кра[E]ю на обрыве над ре[A]кой,                                
 	Не могу пошеве[G#7]лить ни рукой, ни голо[C#m]вой,                               
@@ -3096,7 +3092,7 @@
 	[A]Ветром в голову надуло
 	[G#7]Ла-ла-ла-а
 	
-	\gcomment{Проигрыш:} \ \gchords{С$\sharp$m G$\sharp$7 F$\sharp$ A} (4р)
+	\gcomment{Проигрыш:} \gchords{С$\sharp$m G$\sharp$7 F$\sharp$ A} (4р)
 	
 	Ты ушел от меня к рыжей женщине хромой,
 	Моя мама запретила возвращаться мне домой,
@@ -3106,7 +3102,7 @@
 	
 	\gcomment{Припев:} (2р)
 	\gcomment{Проигрыш}
-	\gcomment{Кода:} \ \gchords{G$\sharp$7 С$\sharp$m}
+	\gcomment{Кода:} \gchords{G$\sharp$7 С$\sharp$m}
 	\end{guitar}
 	
 	\section{Ты вожатый, я вожатый}
@@ -3288,7 +3284,7 @@
 	\gauthor{Пропаганда}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Hm G C F$\sharp$}
+	\gcomment{Вступление}: \gchords{Hm G C F$\sharp$}
 	
 	[Hm] Я рисую[G] на асфальте              
 	[D] Белым мелом [F#]слово "Хватит!".
@@ -3333,7 +3329,7 @@
 	Жалко, им всю жизнь не разукрасить.
 	
 	\gcomment{Припев} (2р)
-	\gcomment{Кода:} \ \gchords{Hm G C F$\sharp$}
+	\gcomment{Кода:} \gchords{Hm G C F$\sharp$}
 	\end{guitar}
 	
 	\section{Хорошо быть вожатым}
@@ -3394,7 +3390,7 @@
 	Хорошо – быть любимым вожатым, 
 	Это потому что хорошо быть вожатым. 
 	
-	\gcomment{Проигрыш:} \ \gchords{С G Am G}
+	\gcomment{Проигрыш:} \gchords{С G Am G}
 	[F]Хорошо, хорошо, хорошо, хорошо,                    
 	[G]Хорошо, хорошо-о-уоу-[C]о
 	\end{guitar}
@@ -3497,17 +3493,17 @@
 	
 	\gcomment{Припев}
 	
-	\gcomment{Кода:} \ \gchords{G D Em Am D} (2р) 
+	\gcomment{Кода:} \gchords{G D Em Am D} (2р) 
 	
 	Это [G]всё,[D] это [Em|]всё [Am|]{ } [D]{ }
-	 \ \gchords{G}
+	 \gchords{G}
 	\end{guitar}
 	
 	\section{Этот город}
 	\gauthor{Браво}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Am}
+	\gcomment{Вступление}: \gchords{Am}
 	
 	[Am]Этот город – самый лучший [C]город на Зем[E]ле,                                 
 	[Am]Он как будто нарисован [F]мелом на сте[E7]не,                  
@@ -3536,7 +3532,7 @@
 	Этот город – самый лучший город на Земле
 	
 	\gcomment{Припев}
-	\gcomment{Проигрыш:} \ \gchords{Am C E Am F E Dm C Am F E7}
+	\gcomment{Проигрыш:} \gchords{Am C E Am F E Dm C Am F E7}
 	\gcomment{Припев}
 	
 	\gcomment{Припев:}
@@ -3544,14 +3540,14 @@
 	Есть такая же весна.
 	Я, пожалуй, отпущу попутный ветер
 	И останусь навсегда... 
-	\gcomment{Кода:} \ \gchords{Hm C D Em}
+	\gcomment{Кода:} \gchords{Hm C D Em}
 	\end{guitar}
 	
 	\section{Я верю}
 	\gauthor{Ляпис Трубецкой}
 	
 	\begin{guitar}
-	\gcomment{Вступление}: \ \gchords{Em C G D} (2p)
+	\gcomment{Вступление}: \gchords{Em C G D} (2p)
 	
 	А[Em]дам и Ева про[C]снулись с утра,                
 	Их [G]друг Гелиос гор[D]дился работой,
@@ -3574,7 +3570,7 @@
 	Я верю Джа, я верю Джа,
 	Я верю Джа и верить буду.
 	
-	\gcomment{Проигрыш:}  \ \gchords{Em C G D} (2p)
+	\gcomment{Проигрыш:}  \gchords{Em C G D} (2p)
 	
 	Хромой Вулкан разводит огонь,
 	Тору нужен кованый молот,
@@ -3599,7 +3595,7 @@
 	Я верю Джа, я верю в любовь,
 	Я верю в добро и верить буду.
 	
-	\gcomment{Кода:} \ \gchords{Em C G}
+	\gcomment{Кода:} \gchords{Em C G}
 	
 	И [D]верить бу[Em]ду… [C|]{ } [G]{ }       (3р)
 	\end{guitar}
