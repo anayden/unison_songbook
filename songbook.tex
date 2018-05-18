@@ -57,7 +57,7 @@
 	
 	% Set table of contents font
 	\usepackage{tocloft}
-	\renewcommand{\cftsecfont}{\normalfont\allods} 
+%	\renewcommand{\cftsecfont}{\normalfont\allods} 
 	
 	% start each section on its own page
 	\usepackage{titlesec}
@@ -65,6 +65,7 @@
 	% Set section title font
 	\titleformat{\section}{\allods\Large\bfseries}{\thesection}{0pt}{}
 	\titlespacing*{\section}{0pt}{0pt}{-5pt}
+	\renewcommand{\cfttoctitlefont}{\Large\allods}
 	
 	% hide section numbers
 	\renewcommand{\thesection}{}
@@ -97,15 +98,24 @@
 	\date{}
 	
 	\newcommand{\gcomment}[1]{\textbf{#1}}
-	\newcommand{\gauthor}[1]{\fancyfoot[R]{#1 }}
+	\newcommand{\gauthor}[1]{\fancyhead[R]{#1 }}
 	\newcommand{\gchords}[1]{{\footnotesize #1}}
-	\newcommand{\gchorus}[1]{\textit{#1}}
+	\newcommand{\gchorus}[1]{%
+		\begin{tcbsiderules}#1\end{tcbsiderules}%
+	}
 %	\newenvironment{gchorus}
 %	{
 %			}
 %			{
 %	
 %	}
+
+\usepackage[most]{tcolorbox}
+\newtcolorbox{tcbsiderules}[1][]{blanker, breakable, 
+	left=3mm,
+	borderline west={1pt}{0pt}{black},
+	parbox=false,
+	#1}
 
 	% Make guitar chords bold
 	\renewcommand\guitarPreAccord{\footnotesize\strut\bfseries}
