@@ -6,6 +6,9 @@
 	\usepackage[T1]{fontenc}
 	\usepackage[english,russian]{babel}
 	
+	% Insert pdf pages
+	\usepackage[final]{pdfpages}
+	
 	\usepackage{toolbox}
 	\usepackage{guitar}
 	
@@ -126,14 +129,15 @@
 	\renewcommand\guitarPreAccord{\footnotesize\strut\bfseries}
 		
 	\begin{document}
-	\begin{titlepage}
-		\vspace*{\stretch{1.0}}
-		\begin{center}
-			\Huge\textbf{Сборник песен обо всём}\\
-			\vspace*{\stretch{2.0}}
-			СПО <<Унисон>>
-		\end{center}
-	\end{titlepage}
+		\includepdf[pages={1}]{title.pdf}
+%	\begin{titlepage}
+%		\vspace*{\stretch{1.0}}
+%		\begin{center}
+%			\Huge\textbf{Сборник песен обо всём}\\
+%			\vspace*{\stretch{2.0}}
+%			СПО <<Унисон>>
+%		\end{center}
+%	\end{titlepage}
 
 	\newpage
 	\pagestyle{empty}
