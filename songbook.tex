@@ -78,7 +78,7 @@
 	\makeatother
 	
 	% Set A5 format
-	\usepackage[left=0.5cm,top=0.2cm,right=0.5cm,bottom=2cm,nohead,footskip=0.5cm]{geometry}
+	\usepackage[left=0.5cm,top=0.5cm,right=0.5cm,bottom=2cm,nohead,footskip=0.5cm]{geometry}
 	\geometry{a5paper}
 	
 	% Two columns
@@ -88,12 +88,11 @@
 	
 	% Header tuning
 	\usepackage{fancyhdr}
-	\setlength{\headheight}{15.2pt}
+	\setlength{\headheight}{20pt}
 	\pagestyle{fancy}
-	\fancyhead[LR]{}
 	\renewcommand{\sectionmark}[1]{\markright{#1}}
-	\fancyhead[L]{\rightmark}
-	\renewcommand{\headrulewidth}{2pt} % remove header lines
+	\fancyhead[L]{\large\allods\rightmark}
+	\renewcommand{\headrulewidth}{2pt}
 
 	\newcommand\invisiblesection[1]{%
 		\refstepcounter{section}%
