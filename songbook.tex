@@ -3685,57 +3685,211 @@
 	
 	\section{Аккорды}
 	
-	\setchordscheme{x-unit={0.3cm}, y-unit={0.3cm}, rotate={270}, name-below=true, name-distance=.1em, tuning = {,,,,,}, finger-format={\sffamily\scriptsize}, finger-x-offset={0.4}}
+	\setchordscheme{x-unit={0.3cm}, y-unit={0.28cm}, rotate={270}, name-below=true, name-distance=.05em, tuning = {,,,,,}, finger-format={\sffamily\tiny}, finger-x-offset={0.45}, position-format={\sffamily\scriptsize}, muted-style={cross out,draw,line width=0.8, scale = 0.7}}
 
+%% C
 	\chordscheme[
 name = C,
-barre = {1/1-5:1},
-finger = {3/4:2, 3/3:3, 3/2:4}, 
+finger = {1/2:1, 2/4:2, 3/5:3}, 
 mute = {6}
 ]%
 \chordscheme[
 name = C$\sharp$,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/2:4}, 
+barre = {1/1-3:1},
+finger = {2/2:2, 3/4:3, 4/5:4}, 
 mute = {6}
 ]%
 \chordscheme[
 name = C$\sharp$7,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/3:4, 2/2:2}, 
-mute = {6}
+finger = {1/2:1, 3/3:4, 2/4:2, 4/5:3}, 
+mute = {1,6},
+position = II
 ]%
-\chordscheme[
+\chordscheme[%%%% back to here
 name = C$\sharp$m,
-barre = {1/1-5:1},
-finger = {3/4:3, 2/2:2}, 
-mute = {6}
+finger = {2/2:3, 1/3:1, 2/4:2}, 
+mute = {5,6}
 ]%
 \chordscheme[
 name = C$\sharp$m7,
-barre = {1/1-5:1},
-finger = {3/4:2, 3/3:3, 3/2:4}, 
-mute = {6}
+barre = {1/2-4:1},
+finger = {3/1:4, 3/3:3}, 
+mute = {5,6},
+position = II
 ]%
 \chordscheme[
 name = C7,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/2:4}, 
+finger = {1/2:1, 3/3:4, 2/5:2, 3/5:3}, 
 mute = {6}
 ]%
 \chordscheme[
 name = Cm,
 barre = {1/1-5:1},
-finger = {3/4:3, 3/3:4, 2/2:2}, 
-mute = {6}
+finger = {2/2:2, 3/3:4, 3/4:3}, 
+mute = {6},
+position = III
 ]%
 \chordscheme[
 name = Cm7,
-barre = {1/1-5:1},
-finger = {3/4:3, 2/2:2}, 
-mute = {6}
+barre = {1/2-4:1},
+finger = {3/1:4, 3/3:3}, 
+mute = {5,6}
 ]
 
+%%% D
+	\chordscheme[
+name = D,
+finger = {2/1:2, 2/3:1, 3/2:3}, 
+mute = {5,6}
+]%
+\chordscheme[
+name = D$\sharp$,
+finger = {1/4:1, 3/3:2, 4/2:4, 3/1:3}, 
+mute = {5,6}
+]%
+\chordscheme[
+name = D$\sharp$7,
+barre = {1/4-5:1},
+finger = {3/3:3, 2/2:2, 3/1:4}, 
+mute = {6}
+]%
+\chordscheme[
+name = D$\sharp$m,
+finger = {1/4:1, 3/3:3, 4/2:4, 2/1:2}, 
+mute = {5, 6}
+]%
+\chordscheme[
+name = D$\sharp$m7,
+finger = {1/4:1, 3/3:4, 2/2:2, 2/1:3}, 
+mute = {5, 6}
+]%
+\chordscheme[
+name = D7,
+finger = {2/3:2, 1/2:1, 2/1:3}, 
+mute = {6}
+]%
+\chordscheme[
+name = Dm,
+finger = {2/3:2, 3/2:3, 1/1:1}, 
+mute = {5,6}
+]%
+\chordscheme[
+name = Dm7,
+barre = {1/1-5:1},
+finger = {2/3:2}, 
+mute = {5,6}
+]
+
+%% E
+
+		\chordscheme[
+name = E,
+finger = {2/5:2, 2/4:3, 1/3:1},
+]%
+\chordscheme[
+name = E7,
+finger = {2/5:2, 1/3:1} 
+]%
+\chordscheme[
+name = Em,
+finger = {2/5:2, 2/4:3}
+]%
+\chordscheme[
+name = Em7,
+finger = {2/5:1}
+]
+
+%%% F
+\chordscheme[
+name = F,
+barre = {1/1-5:1},
+finger = {3/5:3, 3/4:4, 2/3:2} 
+]%
+\chordscheme[
+name = F$\sharp$,
+barre = {1/1-5:1},
+finger = {3/5:3, 3/4:4, 2/3:2}, 
+position = II
+]%
+\chordscheme[
+name = F$\sharp$7,
+barre = {1/1-5:1},
+finger = {3/5:3, 2/3:2, 4/2:4}, 
+position = II
+]%
+\chordscheme[
+name = F$\sharp$m,
+barre = {1/1-5:1},
+finger = {3/5:2, 3/4:3}, 
+position = II
+]%
+\chordscheme[
+name = F$\sharp$m7,
+barre = {1/1-5:1},
+finger = {3/5:2}, 
+position = II
+]%
+\chordscheme[
+name = F7,
+barre = {1/1-5:1},
+finger = {3/5:3, 2/3:2, 4/2:4} 
+]%
+\chordscheme[
+name = Fm,
+barre = {1/1-5:1},
+finger = {3/5:2, 3/4:3} 
+]%
+\chordscheme[
+name = Fm7,
+barre = {1/1-5:1},
+finger = {3/5:2}
+]
+
+%%% G
+\chordscheme[
+name = G,
+finger = {3/6:2, 2/5:1, 3/1:3},
+]%
+\chordscheme[
+name = G$\sharp$,
+barre = {1/1-6:1},
+finger = {3/5:3, 3/4:4, 2/3:2}, 
+position = IV
+]%
+\chordscheme[
+name = G$\sharp$7,
+barre = {1/2-4:1},
+finger = {2/1:2}, 
+mute = {5,6}
+]%
+\chordscheme[
+name = G$\sharp$m,
+barre = {1/1-6:1},
+finger = {3/5:2, 3/4:3},
+]%
+\chordscheme[
+name = G$\sharp$m7,
+finger = {1/4:1, 1/3:2, 2/1:3}, 
+mute = {5,6}
+]%
+\chordscheme[
+name = G7,
+finger = {3/6:3, 2/5:2, 1/1:1}, 
+]%
+\chordscheme[
+name = Gm,
+barre = {1/1-6:1},
+finger = {3/5:2, 3/4:3}, 
+position = III
+]%
+\chordscheme[
+name = Gm7,
+barre = {1/1-5:1},
+finger = {3/5:2}, 
+position = III
+]
+
+%% A
 		\chordscheme[
 			name = A,
 			finger = {2/4:1, 2/3:2, 2/2:3}, 
@@ -3757,6 +3911,33 @@ mute = {6}
 			mute = {6}
 		]
 
+%% H
+\chordscheme[
+name = H,
+barre = {1/1-5:1},
+finger = {3/4:2, 3/3:3, 3/2:4}, 
+mute = {6},
+position = II
+]%
+\chordscheme[
+name = H7,
+finger = {2/5:2, 1/4:1, 2/3:3, 2/1:4}, 
+mute = {6}
+]%
+\chordscheme[
+name = Hm,
+barre = {1/1-5:1},
+finger = {3/4:3, 3/3:4, 2/2:2}, 
+mute = {6},
+position = II
+]%
+\chordscheme[
+name = Hm7,
+finger = {2/3:1, 2/1:2}, 
+mute = {5,6}
+]
+
+%% B
 	\chordscheme[
 		name = B,
 		barre = {1/1-5:1},
