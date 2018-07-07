@@ -8,6 +8,9 @@
 	
 	% Insert pdf pages
 	\usepackage[final]{pdfpages}
+
+	% for size calculations
+	\usepackage{calc}
 	
 	\usepackage{toolbox}
 	\usepackage{guitar}
@@ -82,7 +85,7 @@
 	
 	% Set A5 format
 	\usepackage[
-	showframe,
+%	showframe,
 	left=0.5cm,
 	top=0.5cm,
 	right=0.5cm,
@@ -154,12 +157,26 @@
 	\end{center}
 	\newpage
 	\pagestyle{plain}
-	\newgeometry{left=2cm}
+	\newgeometry{left=2cm,
+		top=1.5cm,
+		right=1cm,
+		bottom=2cm,
+		nohead,
+		headsep=0.5em,
+		marginparwidth=0pt,
+		footskip=0.5cm}
 	
 	\tableofcontents
 
 	\restoregeometry
-%	\newgeometry{}
+	\newgeometry{left=4cm,
+		top=3em,
+		right=0.5cm,
+		bottom=2cm,
+		headsep=0.5em,
+		marginparwidth=0pt,
+		footskip=0.5cm}
+	\fancyhfoffset[L]{3cm}
 	\section{3 полоски}
 	\pagestyle{fancy}
 	\renewcommand{\sectionmark}[1]{\markright{#1}}
@@ -1004,7 +1021,14 @@
 	\end{guitar}
 
 	\gcomment{Припев}
-	
+		\newgeometry{left=4cm,
+		top=3em,
+		right=0.5cm,
+		bottom=1.25cm,
+		headsep=0.5em,
+		marginparwidth=0pt,
+		footskip=0.5cm}
+	\fancyhfoffset[L]{3cm}
 	\section{Джин и тоник}
 	\gauthor{Зимовье зверей}
 	
@@ -1087,7 +1111,13 @@
 	
 	\gcomment{Проигрыш} \gchords{Dm Gm A7 Dm} (2р)
 	\end{guitar}
-	
+	\newgeometry{left=4cm,
+	top=3em,
+	right=0.5cm,
+	bottom=2cm,
+	headsep=0.5em,
+	marginparwidth=0pt,
+	footskip=0.5cm}
 	\section{До скорой встречи}
 	\gauthor{Звери}
 	
@@ -1296,7 +1326,10 @@
 	Осыпая крупной солью
 	Струпья цвета бычьей крови,
 	Словно память древней боли.
+	\end{guitar}
 		\newpage
+\newgeometry{left=4cm,top=3em,right=0.5cm,bottom=1.5cm,headsep=0.5em,footskip=0.5cm}
+	\begin{guitar}
 	\gcomment{Припев}  
 	\gcomment{Проигрыш:}
 	\gchords{Am  F | G G C Gsus4 | F G | Am}
@@ -1333,7 +1366,14 @@
 	И у огней небесных стран
 	Сегодня будет тепло.
 	\end{guitar}
-	
+
+	\newgeometry{left=4cm,
+	top=3em,
+	right=0.5cm,
+	bottom=2cm,
+	headsep=0.5em,
+	marginparwidth=0pt,
+	footskip=0.5cm}
 	\section{Если у вас нету тети}
 	\gauthor{Из к/ф “Ирония судьбы,\\или С легким паром!”}
 	
@@ -1758,8 +1798,8 @@
 	И в процессе представленья 
 	Cоздается впечатленье,
 	Что куклы пляшут сами по себе.
-	Ля-ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля ля-ля-ля
-	Ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля-ля-ля-ля
+%	Ля-ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля ля-ля-ля
+%	Ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля-ля-ля-ля
 	
 	\gcomment{Проигрыш} \gchords{C D G E7 Am D G} 
 	\newpage
@@ -1782,9 +1822,9 @@
 	И кукол снимут с нитки длинной 
 	И, засыпав нафталином, 
 	В виде тряпок сложат в сундуках.
-	
-	Ля-ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля ля-ля-ля
-	Ля-ля-ля-ля-ля-ля ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля-ля-ля-ля
+
+%	Ля-ля-ля-ля-ля-ля-ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля ля-ля-ля
+%	Ля-ля-ля-ля-ля-ля ля ля-ля-ля ля-ля-ля-ля-ля-ля-ля-ля-ля-ля
 	
 	\gcomment{Кода:} \gchords{C D G E7 Am D G}
 \end{guitar}
@@ -1896,7 +1936,7 @@
 	\gcomment{Кода:} \gchords{Em C G D} (4р)
 \end{guitar}
 	
-	
+\newgeometry{left=4cm,top=3em,right=0.5cm,bottom=1.5cm,headsep=0.5em,footskip=0.5cm}	
 	\section{Мой рок-н-ролл}
 	\gauthor{Би-2}
 
@@ -1938,8 +1978,9 @@
 	И для любви это не место.
 	Дорога - мой дом, и для любви это не место. (4р)
 	\end{guitar}
-	
+	\newgeometry{left=4cm,top=3em,right=0.5cm,bottom=1.5cm,headsep=0.5em,footskip=0.5cm}
 	\section{Моё сердце}
+
 	\gauthor{Сплин}
 	
 	\begin{guitar}
@@ -3688,7 +3729,8 @@
 	
 	% Remove author from chords pages
 	\gauthor{}
-	
+	\newgeometry{left=0.5cm,top=3em,right=0.5cm,bottom=1.5cm,headsep=0.0em,footskip=0.5cm}
+	\fancyheadoffset{0pt}
 	\section{Аккорды}
 	
 	\setchordscheme{x-unit={0.3cm}, y-unit={0.28cm}, rotate={270}, name-below=true, name-distance=.05em, tuning = {,,,,,}, finger-format={\sffamily\tiny}, finger-x-offset={0.45}, position-format={\sffamily\scriptsize}, muted-style={cross out,draw,line width=0.8, scale = 0.7}}
@@ -3916,8 +3958,6 @@ mute = {5,6}
 			finger = {2/4:2, 1/2:1}, 
 			mute = {6}
 		]
-
-
 
 %% B
 \chordscheme[
