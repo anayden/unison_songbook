@@ -67,7 +67,7 @@
 	\newcommand{\sectionbreak}{\clearpage}
 	% Set section title font
 	\titleformat{\section}{}{\thesection}{0pt}{\hphantom}
-	\titlespacing*{\section}{0pt}{0pt}{-5pt}
+	\titlespacing*{\section}{0pt}{0pt}{-15pt}
 	\renewcommand{\cfttoctitlefont}{\Large\allods}
 	
 	% hide section numbers
@@ -81,8 +81,19 @@
 	\makeatother
 	
 	% Set A5 format
-	\usepackage[left=0.5cm,top=0.5cm,right=0.5cm,bottom=2cm,nohead,footskip=0.5cm]{geometry}
+	\usepackage[
+	showframe,
+	left=0.5cm,
+	top=0.5cm,
+	right=0.5cm,
+	bottom=2cm,
+	nohead,
+	headsep=0.5em,
+	marginparwidth=0pt,
+	footskip=0.5cm]{geometry}
 	\geometry{a5paper}
+	
+%	\usepackage{showframe}
 	
 	% Two columns
 	\usepackage{multicol}
@@ -103,7 +114,7 @@
 	
 	\title{Сборник песен обо всём}
 	\author{Алексей Найден}
-	\date{}
+	\date{\today}
 	
 	\newcommand{\gcomment}[1]{\textbf{#1}}
 	\newcommand{\gauthor}[1]{\fancyhead[R]{\textit{#1} }}
@@ -111,12 +122,6 @@
 	\newcommand{\gchorus}[1]{%
 		\begin{tcbsiderules}#1\end{tcbsiderules}%
 	}
-%	\newenvironment{gchorus}
-%	{
-%			}
-%			{
-%	
-%	}
 
 \usepackage[most]{tcolorbox}
 \newtcolorbox{tcbsiderules}[1][]{blanker, breakable, 
@@ -130,14 +135,6 @@
 		
 	\begin{document}
 		\includepdf[pages={1}]{title.pdf}
-%	\begin{titlepage}
-%		\vspace*{\stretch{1.0}}
-%		\begin{center}
-%			\Huge\textbf{Сборник песен обо всём}\\
-%			\vspace*{\stretch{2.0}}
-%			СПО <<Унисон>>
-%		\end{center}
-%	\end{titlepage}
 
 	\newpage
 	\pagestyle{empty}
@@ -156,10 +153,13 @@
 	}
 	\end{center}
 	\newpage
-		\pagestyle{plain}
+	\pagestyle{plain}
+	\newgeometry{left=2cm}
 	
 	\tableofcontents
 
+	\restoregeometry
+%	\newgeometry{}
 	\section{3 полоски}
 	\pagestyle{fancy}
 	\renewcommand{\sectionmark}[1]{\markright{#1}}
@@ -188,7 +188,7 @@
 	      Мы переживем\dots}
 	
 	     \gcomment{Проигрыш:} \gchords{Dm Dm B F С} (2р)
-	\newpage
+
 	    Зайди в знакомый подъезд,
 	    Поднимись на восьмой этаж.
 	    Смотри, как солнышко ест
@@ -198,7 +198,7 @@
 	    Он оденет тебя в новую любовь
 	
 	      \gcomment{Припев} (2р)
-	      
+	\newpage
 	    [Am]Лишь [B]несколько слов [F]могут [Dm_]у[C]бить,
 	    Но, если веришь в любовь, стоит еще жить.
 	    Лишь несколько слов могут убить,
@@ -992,7 +992,7 @@
 	Напропалую.
 	
 	\gcomment{Припев}
-		\newpage
+	\newpage
 	И вечером поздним, 
 	Когда все уснули, 
 	Вожатые Дружных
@@ -1485,7 +1485,7 @@
 	
 	\gcomment{Припев}
 		\newpage
-		\vspace{0.1em}
+		\vspace{0.05em}
 	Если солнце на ладони, 
 	Если сердце в звуках тонет,
 	Ты потерян для обычных дней.
@@ -1628,12 +1628,12 @@
 	Чтобы беды и печали
 	Нас с тобой не разлучали
 	[F]Никог[G]да?}
-\newpage
+
 	Что случилось прошлым летом?
 	Впрочем, стоит ли об этом\dots
 	Ты немножко изменилась,
 	Да и я сменил свой имидж.
-	
+\newpage	
 	Может быть, мы были скупы,
 	Невнимательны и глупы?
 	Может быть, все перетрется,
@@ -1872,12 +1872,12 @@
 	Со мной\dots}
 	
 	\gcomment{Проигрыш:} \gchords{Em C G D} (2р)
-	\newpage
+
 	Ищут землю фонари,
 	К небу тянется свеча.
 	На снегу следы зари,
 	Крылья павшего луча.
-	
+	\newpage	
 	Что же, вьюга, наливай,
 	Выпьем время натощак.
 	Я спою, ты в такт пролай
@@ -2571,12 +2571,12 @@
 	Уходящие в дальний поход корабли,
 	Я на память возьму о тебе в долгий путь
 	Нежный шепот далекой Земли.}
-			\newpage
+
 	Никто не знает, что случится в пути,
 	Но далеко ведет наш дерзкий расчет.
 	И если нужно будет солнце пронзить -
 	Мы скажем: <<Полный вперед!>>.
-	
+			\newpage
 	Протуберанцы покоренных светил                  
 	В горячем танце бесятся за кармой,
 	И мы найдем еще с полсотни планет
@@ -3562,12 +3562,12 @@
 	И шепни на прощанье рекой
 	
 	\gcomment{Припев} (2р)
-			\newpage
+
 	Две мечты, да печали стакан
 	Мы, воскреснув, допили до дна.
 	Я не знаю, зачем тебе дан,
 	Правит мною дорога - луна.
-	
+			\newpage	
 	И не плачь, если можешь, прости.
 	Жизнь – не сахар, а смерть нам – не чай.
 	Мне свою дорогу нести.
@@ -3577,7 +3577,7 @@
 	
 	\gcomment{Кода:} \gchords{G D Em Am D} (2р) 
 	
-	Это [G]всё,[D] это [Em|]всё [Am|]{ } [D]{ }
+	Это [G]всё,[D] это [Em]всё [Am|]{ } [D]{ }
 	 \gchords{G}
 	\end{guitar}
 	
@@ -3608,16 +3608,16 @@
 	Есть такая же весна.
 	Я, пожалуй, отпущу попутный ветер
 	И останусь навсегда (с тобою)}
-			\newpage
+
 	Голубые тротуары, синие цветы,
 	Ярко-желтые трамваи, розовые сны,
 	Он как будто нарисован мелом на стене.
 	Этот город – самый лучший город на Земле
-	
+
 	\gcomment{Припев}
 	\gcomment{Проигрыш:} \gchords{Am C E Am F E Dm C Am F E7}
 	\gcomment{Припев}
-	
+			\newpage		
 	\gcomment{Припев:}%
 	\gchorus{
 	[Em]Я не [C]знаю, где ещ[D]е на [H7]этом свете 
