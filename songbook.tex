@@ -136,6 +136,9 @@
 	% Make guitar chords bold
 	\renewcommand\guitarPreAccord{\footnotesize\strut\bfseries}
 		
+\usepackage{scrextend}
+
+
 	\begin{document}
 		\includepdf[pages={1}]{title.pdf}
 
@@ -224,6 +227,8 @@
 	      \gcomment{Припев} (2р)
 	      \gcomment{Кода:} \gchords{Bm}
 	  \end{guitar}
+%\renewcommand{\sectionbreak}{\asterism\newpage}
+%  \asterism
 	\section{10 капель}
 	\gauthor{Танцы минус}
 	
@@ -980,6 +985,7 @@
 	\end{guitar}
 	
 	\section{Грязные корпуса}
+	
 	\gauthor{СПО <<Мишка>>}
 	
 	\begin{guitar}
@@ -1009,7 +1015,9 @@
 	Напропалую.
 	
 	\gcomment{Припев}
+	
 	\newpage
+	
 	И вечером поздним, 
 	Когда все уснули, 
 	Вожатые Дружных
@@ -1021,15 +1029,17 @@
 	\end{guitar}
 
 	\gcomment{Припев}
-		\newgeometry{left=4cm,
-		top=3em,
-		right=0.5cm,
-		bottom=1.25cm,
-		headsep=0.5em,
-		marginparwidth=0pt,
-		footskip=0.5cm}
-	\fancyhfoffset[L]{3cm}
+	\nopagebreak
 	\section{Джин и тоник}
+	\fancyhfoffset[L]{3cm}
+\newgeometry{left=4cm,
+	top=3em,
+	right=0.5cm,
+	bottom=1.25cm,
+	headsep=0.5em,
+	marginparwidth=0pt,
+	footskip=0.5cm}
+
 	\gauthor{Зимовье зверей}
 	
 	\begin{guitar}
@@ -1935,11 +1945,9 @@
 	\gcomment{Припев}
 	\gcomment{Кода:} \gchords{Em C G D} (4р)
 \end{guitar}
-	
-\newgeometry{left=4cm,top=3em,right=0.5cm,bottom=1.5cm,headsep=0.5em,footskip=0.5cm}	
 	\section{Мой рок-н-ролл}
 	\gauthor{Би-2}
-
+\newgeometry{left=4cm,top=3em,right=0.5cm,bottom=1.5cm,headsep=0.5em,footskip=0.5cm}	
 	\begin{guitar}
 	\gcomment{Вступление:} \gchords{F G Am}
 	                                  
@@ -3733,287 +3741,298 @@
 	\fancyheadoffset{0pt}
 	\section{Аккорды}
 	
-	\setchordscheme{x-unit={0.3cm}, y-unit={0.28cm}, rotate={270}, name-below=true, name-distance=.05em, tuning = {,,,,,}, finger-format={\sffamily\tiny}, finger-x-offset={0.45}, position-format={\sffamily\scriptsize}, muted-style={cross out,draw,line width=0.8, scale = 0.7}}
-
-%% C
-	\chordscheme[
-name = C,
-finger = {1/2:1, 2/4:2, 3/5:3}, 
-mute = {6}
-]%
-\chordscheme[
-name = C7,
-finger = {1/2:1, 3/3:4, 2/5:2, 3/5:3}, 
-mute = {6}
-]%
-\chordscheme[
-name = Cm,
-barre = {1/1-5:1},
-finger = {2/2:2, 3/3:4, 3/4:3}, 
-mute = {6},
-position = III
-]%
-\chordscheme[
-name = Cm7,
-barre = {1/2-4:1},
-finger = {3/1:4, 3/3:3}, 
-mute = {5,6}
-]%
-\chordscheme[
-name = C$\sharp$,
-barre = {1/1-3:1},
-finger = {2/2:2, 3/4:3, 4/5:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = C$\sharp$7,
-finger = {1/2:1, 3/3:4, 2/4:2, 4/5:3}, 
-mute = {1,6},
-position = II
-]%
-\chordscheme[%%%% back to here
-name = C$\sharp$m,
-finger = {2/2:3, 1/3:1, 2/4:2}, 
-mute = {5,6}
-]%
-\chordscheme[
-name = C$\sharp$m7,
-barre = {1/2-4:1},
-finger = {3/1:4, 3/3:3}, 
-mute = {5,6},
-position = II
-]%
-
-%% D
-	\chordscheme[
-name = D,
-finger = {2/1:2, 2/3:1, 3/2:3}, 
-mute = {5,6}
-]%
-\chordscheme[
-name = D7,
-finger = {2/3:2, 1/2:1, 2/1:3}, 
-mute = {6}
-]%
-\chordscheme[
-name = Dm,
-finger = {2/3:2, 3/2:3, 1/1:1}, 
-mute = {5,6}
-]%
-\chordscheme[
-name = Dm7,
-barre = {1/1-5:1},
-finger = {2/3:2}, 
-mute = {5,6}
-]%
-\chordscheme[
-name = D$\sharp$,
-finger = {1/4:1, 3/3:2, 4/2:4, 3/1:3}, 
-mute = {5,6}
-]%
-\chordscheme[
-name = D$\sharp$7,
-barre = {1/4-5:1},
-finger = {3/3:3, 2/2:2, 3/1:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = D$\sharp$m,
-finger = {1/4:1, 3/3:3, 4/2:4, 2/1:2}, 
-mute = {5, 6}
-]%
-\chordscheme[
-name = D$\sharp$m7,
-finger = {1/4:1, 3/3:4, 2/2:2, 2/1:3}, 
-mute = {5, 6}
-]%
-
-%% E
-
+	\setchordscheme{
+		x-unit={0.5cm},
+		y-unit={0.5cm},
+		rotate={270},
+		name-below=true,
+		name-distance=.1em,
+		tuning = {,,,,,},
+		finger-format={\sffamily\scriptsize},
+		position-format={\sffamily\footnotesize},
+		muted-style={cross out,draw,line width=1, scale = 1}
+	}
+%\begin{center}
+		%% C
 		\chordscheme[
-name = E,
-finger = {2/5:2, 2/4:3, 1/3:1},
-]%
-\chordscheme[
-name = E7,
-finger = {2/5:2, 1/3:1} 
-]%
-\chordscheme[
-name = Em,
-finger = {2/5:2, 2/4:3}
-]%
-\chordscheme[
-name = Em7,
-finger = {2/5:1}
-]
-
-%%% F
-\chordscheme[
-name = F,
-barre = {1/1-5:1},
-finger = {3/5:3, 3/4:4, 2/3:2} 
-]%
-\chordscheme[
-name = F7,
-barre = {1/1-5:1},
-finger = {3/5:3, 2/3:2, 4/2:4} 
-]%
-\chordscheme[
-name = Fm,
-barre = {1/1-5:1},
-finger = {3/5:2, 3/4:3} 
-]%
-\chordscheme[
-name = Fm7,
-barre = {1/1-5:1},
-finger = {3/5:2}
-]%
-\chordscheme[
-name = F$\sharp$,
-barre = {1/1-5:1},
-finger = {3/5:3, 3/4:4, 2/3:2}, 
-position = II
-]%
-\chordscheme[
-name = F$\sharp$7,
-barre = {1/1-5:1},
-finger = {3/5:3, 2/3:2, 4/2:4}, 
-position = II
-]%
-\chordscheme[
-name = F$\sharp$m,
-barre = {1/1-5:1},
-finger = {3/5:2, 3/4:3}, 
-position = II
-]%
-\chordscheme[
-name = F$\sharp$m7,
-barre = {1/1-5:1},
-finger = {3/5:2}, 
-position = II
-]%
-
-%%% G
-\chordscheme[
-name = G,
-finger = {3/6:2, 2/5:1, 3/1:3},
-]%
-\chordscheme[
-name = G7,
-finger = {3/6:3, 2/5:2, 1/1:1}, 
-]%
-\chordscheme[
-name = Gm,
-barre = {1/1-6:1},
-finger = {3/5:2, 3/4:3}, 
-position = III
-]%
-\chordscheme[
-name = Gm7,
-barre = {1/1-5:1},
-finger = {3/5:2}, 
-position = III
-]%
-\chordscheme[
-name = G$\sharp$,
-barre = {1/1-6:1},
-finger = {3/5:3, 3/4:4, 2/3:2}, 
-position = IV
-]%
-\chordscheme[
-name = G$\sharp$7,
-barre = {1/2-4:1},
-finger = {2/1:2}, 
-mute = {5,6}
-]%
-\chordscheme[
-name = G$\sharp$m,
-barre = {1/1-6:1},
-finger = {3/5:2, 3/4:3},
-]%
-\chordscheme[
-name = G$\sharp$m7,
-finger = {1/4:1, 1/3:2, 2/1:3}, 
-mute = {5,6}
-]%
-
-%% A
-		\chordscheme[
-			name = A,
-			finger = {2/4:1, 2/3:2, 2/2:3}, 
-			mute = {6}
+		name = C,
+		finger = {1/2:1, 2/4:2, 3/5:3}, 
+		mute = {6}
 		]%
 		\chordscheme[
-			name = A7,
-			finger = {2/4:1, 2/2:2}, 
-			mute = {6}
+		name = C7,
+		finger = {1/2:1, 3/3:4, 2/5:2, 3/5:3}, 
+		mute = {6}
 		]%
 		\chordscheme[
-			name = Am,
-			finger = {2/4:2, 2/3:3, 1/2:1}, 
-			mute = {6}
+		name = Cm,
+		barre = {1/1-5:1},
+		finger = {2/2:2, 3/3:4, 3/4:3}, 
+		mute = {6},
+		position = III
 		]%
 		\chordscheme[
-			name = Am7,
-			finger = {2/4:2, 1/2:1}, 
-			mute = {6}
+		name = Cm7,
+		barre = {1/2-4:1},
+		finger = {3/1:4, 3/3:3}, 
+		mute = {5,6}
 		]
-
-%% B
-\chordscheme[
-name = B,
-barre = {1/1-5:1},
-finger = {3/4:2, 3/3:3, 3/2:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = B7,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/2:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = Bm,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/3:4, 2/2:2}, 
-mute = {6}
-]%
-\chordscheme[
-name = Bm7,
-barre = {1/1-5:1},
-finger = {3/4:3, 2/2:2}, 
-mute = {6}
-]
-
-%% H
-\chordscheme[
-name = H,
-barre = {1/1-5:1},
-finger = {3/4:2, 3/3:3, 3/2:4}, 
-mute = {6},
-position = II
-]%
-\chordscheme[
-name = H7,
-finger = {2/5:2, 1/4:1, 2/3:3, 2/1:4}, 
-mute = {6}
-]%
-\chordscheme[
-name = Hm,
-barre = {1/1-5:1},
-finger = {3/4:3, 3/3:4, 2/2:2}, 
-mute = {6},
-position = II
-]%
-\chordscheme[
-name = Hm7,
-finger = {2/3:1, 2/1:2}, 
-mute = {5,6}
-]
-
-
-
-
+		
+		
+		\chordscheme[
+		name = C$\sharp$,
+		barre = {1/1-3:1},
+		finger = {2/2:2, 3/4:3, 4/5:4}, 
+		mute = {6}
+		]%
+		\chordscheme[
+		name = C$\sharp$7,
+		finger = {1/2:1, 3/3:4, 2/4:2, 4/5:3}, 
+		mute = {1,6},
+		position = II
+		]%
+		\chordscheme[%%%% back to here
+		name = C$\sharp$m,
+		finger = {2/2:3, 1/3:1, 2/4:2}, 
+		mute = {5,6}
+		]%
+		\chordscheme[
+		name = C$\sharp$m7,
+		barre = {1/2-4:1},
+		finger = {3/1:4, 3/3:3}, 
+		mute = {5,6},
+		position = II
+		]%
+	
+	%% D
+		\chordscheme[
+	name = D,
+	finger = {2/1:2, 2/3:1, 3/2:3}, 
+	mute = {5,6}
+	]%
+	\chordscheme[
+	name = D7,
+	finger = {2/3:2, 1/2:1, 2/1:3}, 
+	mute = {6}
+	]%
+	\chordscheme[
+	name = Dm,
+	finger = {2/3:2, 3/2:3, 1/1:1}, 
+	mute = {5,6}
+	]%
+	\chordscheme[
+	name = Dm7,
+	barre = {1/1-5:1},
+	finger = {2/3:2}, 
+	mute = {5,6}
+	]
+	
+	\chordscheme[
+	name = D$\sharp$,
+	finger = {1/4:1, 3/3:2, 4/2:4, 3/1:3}, 
+	mute = {5,6}
+	]%
+	\chordscheme[
+	name = D$\sharp$7,
+	barre = {1/4-5:1},
+	finger = {3/3:3, 2/2:2, 3/1:4}, 
+	mute = {6}
+	]%
+	\chordscheme[
+	name = D$\sharp$m,
+	finger = {1/4:1, 3/3:3, 4/2:4, 2/1:2}, 
+	mute = {5, 6}
+	]%
+	\chordscheme[
+	name = D$\sharp$m7,
+	finger = {1/4:1, 3/3:4, 2/2:2, 2/1:3}, 
+	mute = {5, 6}
+	]%
+	
+	%% E
+			\chordscheme[
+	name = E,
+	finger = {2/5:2, 2/4:3, 1/3:1},
+	]%
+	\chordscheme[
+	name = E7,
+	finger = {2/5:2, 1/3:1} 
+	]%
+	\chordscheme[
+	name = Em,
+	finger = {2/5:2, 2/4:3}
+	]%
+	\chordscheme[
+	name = Em7,
+	finger = {2/5:1}
+	]
+	
+	%%% F
+	\chordscheme[
+	name = F,
+	barre = {1/1-5:1},
+	finger = {3/5:3, 3/4:4, 2/3:2} 
+	]%
+	\chordscheme[
+	name = F7,
+	barre = {1/1-5:1},
+	finger = {3/5:3, 2/3:2, 4/2:4} 
+	]%
+	\chordscheme[
+	name = Fm,
+	barre = {1/1-5:1},
+	finger = {3/5:2, 3/4:3} 
+	]%
+	\chordscheme[
+	name = Fm7,
+	barre = {1/1-5:1},
+	finger = {3/5:2}
+	]
+	
+	\chordscheme[
+	name = F$\sharp$,
+	barre = {1/1-5:1},
+	finger = {3/5:3, 3/4:4, 2/3:2}, 
+	position = II
+	]%
+	\chordscheme[
+	name = F$\sharp$7,
+	barre = {1/1-5:1},
+	finger = {3/5:3, 2/3:2, 4/2:4}, 
+	position = II
+	]%
+	\chordscheme[
+	name = F$\sharp$m,
+	barre = {1/1-5:1},
+	finger = {3/5:2, 3/4:3}, 
+	position = II
+	]%
+	\chordscheme[
+	name = F$\sharp$m7,
+	barre = {1/1-5:1},
+	finger = {3/5:2}, 
+	position = II
+	]%
+	
+	%%% G
+	\chordscheme[
+	name = G,
+	finger = {3/6:2, 2/5:1, 3/1:3},
+	]%
+	\chordscheme[
+	name = G7,
+	finger = {3/6:3, 2/5:2, 1/1:1}, 
+	]%
+	\chordscheme[
+	name = Gm,
+	barre = {1/1-6:1},
+	finger = {3/5:2, 3/4:3}, 
+	position = III
+	]%
+	\chordscheme[
+	name = Gm7,
+	barre = {1/1-5:1},
+	finger = {3/5:2}, 
+	position = III
+	]
+	
+	\chordscheme[
+	name = G$\sharp$,
+	barre = {1/1-6:1},
+	finger = {3/5:3, 3/4:4, 2/3:2}, 
+	position = IV
+	]%
+	\chordscheme[
+	name = G$\sharp$7,
+	barre = {1/2-4:1},
+	finger = {2/1:2}, 
+	mute = {5,6}
+	]%
+	\chordscheme[
+	name = G$\sharp$m,
+	barre = {1/1-6:1},
+	finger = {3/5:2, 3/4:3},
+	]%
+	\chordscheme[
+	name = G$\sharp$m7,
+	finger = {1/4:1, 1/3:2, 2/1:3}, 
+	mute = {5,6}
+	]%
+	
+	%% A
+			\chordscheme[
+				name = A,
+				finger = {2/4:1, 2/3:2, 2/2:3}, 
+				mute = {6}
+			]%
+			\chordscheme[
+				name = A7,
+				finger = {2/4:1, 2/2:2}, 
+				mute = {6}
+			]%
+			\chordscheme[
+				name = Am,
+				finger = {2/4:2, 2/3:3, 1/2:1}, 
+				mute = {6}
+			]%
+			\chordscheme[
+				name = Am7,
+				finger = {2/4:2, 1/2:1}, 
+				mute = {6}
+			]
+	
+	%% B
+	\chordscheme[
+	name = B,
+	barre = {1/1-5:1},
+	finger = {3/4:2, 3/3:3, 3/2:4}, 
+	mute = {6}
+	]%
+	\chordscheme[
+	name = B7,
+	barre = {1/1-5:1},
+	finger = {3/4:3, 3/2:4}, 
+	mute = {6}
+	]%
+	\chordscheme[
+	name = Bm,
+	barre = {1/1-5:1},
+	finger = {3/4:3, 3/3:4, 2/2:2}, 
+	mute = {6}
+	]%
+	\chordscheme[
+	name = Bm7,
+	barre = {1/1-5:1},
+	finger = {3/4:3, 2/2:2}, 
+	mute = {6}
+	]
+	
+	%% H
+	\chordscheme[
+	name = H,
+	barre = {1/1-5:1},
+	finger = {3/4:2, 3/3:3, 3/2:4}, 
+	mute = {6},
+	position = II
+	]%
+	\chordscheme[
+	name = H7,
+	finger = {2/5:2, 1/4:1, 2/3:3, 2/1:4}, 
+	mute = {6}
+	]%
+	\chordscheme[
+	name = Hm,
+	barre = {1/1-5:1},
+	finger = {3/4:3, 3/3:4, 2/2:2}, 
+	mute = {6},
+	position = II
+	]%
+	\chordscheme[
+	name = Hm7,
+	finger = {2/3:1, 2/1:2}, 
+	mute = {5,6}
+	]
+%\end{center}
 	\end{document}
 	
 	% Local Variables:
