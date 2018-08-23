@@ -93,7 +93,8 @@
 	nohead,
 	headsep=0.5em,
 	marginparwidth=0pt,
-	footskip=0.5cm]{geometry}
+	footskip=0.5cm,
+	showframe=false]{geometry}
 	\geometry{a5paper}
 	
 %	\usepackage{showframe}
@@ -135,6 +136,11 @@
 
 	% Make guitar chords bold
 	\renewcommand\guitarPreAccord{\footnotesize\strut\bfseries}
+	
+	% Command to modify margin for a subset of page
+	\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+	\let\endchangemargin=\endlist 
+	
 		
 \usepackage{scrextend}
 
@@ -1425,10 +1431,10 @@
 	\gcomment{Кода:} [А7] И[Dm]меть или [E]не и[Am]меть
 	
 	\end{guitar}
-	
+
 	\section{Забери}
 	\gauthor{Сергей Бабкин}
-	
+\begin{changemargin}{-1.5cm}{0cm} 
 	\begin{music}
 		\instrumentnumber{1}
 		\nobarnumbers
@@ -1469,7 +1475,8 @@
 	\Notes\Str40\en
 	\endpiece
 	\end{music}
-	
+\end{changemargin}
+
 	\begin{guitar}
 	Забери меня к себе,
 	Я так устал бежать
@@ -2788,7 +2795,7 @@
 	\gchorus{
 	Засы[F]пай на ру[G]ках у меня, засы[Am]пай.                 
 	Засы[F]пай[G] под пенье дож[Am]дя.                           
-	Дале[F]ко – там, где [G]неба кончается [Am| ]{ }[G| ]{ }[C| ]{ }[Dm]кра-а-а-ай
+	Дале[F]ко – там, где [G]неба кончается [Am|]{кра}[G|]{-а}[C|]{-а-}[Dm]{ай}
 	Ты най[F]дёшь[G] потерянный [Am]рай. }
 	
 	\gcomment{Проигрыш:} \gchords{Am D F C G}
