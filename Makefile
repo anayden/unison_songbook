@@ -1,0 +1,2 @@
+songbook:
+	latexmk -xelatex songbook
